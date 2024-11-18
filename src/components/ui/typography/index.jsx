@@ -28,8 +28,8 @@ export const Typography = (props) => {
 
     const WEIGHT = {
       400: " w-400",
+      500: " w-500",
       600: " w-600",
-      700: " w-700",
     };
 
     const COLOR = {
