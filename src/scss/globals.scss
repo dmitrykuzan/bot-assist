@@ -28,6 +28,7 @@ $containerWidth: 131.5rem;
   // Colors
   --clr-default-100: #fff;
   --clr-default-120: #fcfcfc;
+  --clr-default-170: #c8c8c8;
   --clr-default-180: #888888;
   --clr-default-200: rgba(255, 255, 255, 0.6);
   --clr-default-250: rgba(255, 255, 255, 0.3);
@@ -107,6 +108,8 @@ main {
 // Components - UI
 @import "./ui";
 @import "./stack";
+@import "./components/ui/language";
+@import "./components/ui/theme";
 @import "./components/ui/typography";
 @import "./components/ui/logo";
 // Components - UI
@@ -117,6 +120,7 @@ main {
 // Components - Sections
 @import "./components/sections/header";
 @import "./components/sections/footer";
+@import "./components/sections/panel";
 // Components - Sections
 
 // Components - Common

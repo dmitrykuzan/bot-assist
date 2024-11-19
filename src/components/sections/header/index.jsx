@@ -1,6 +1,9 @@
 import { Container, Logo } from "@components/ui";
+import { useTranslation } from "@hooks";
 
 export const Header = () => {
+  const t = useTranslation();
+
   return (
     <header className="header">
       <Container>
@@ -8,11 +11,11 @@ export const Header = () => {
           <Logo src="/img/ui/logo.svg" />
 
           <div className="header__navigation stack align-center">
-            <button className="header__button-bitrix">
-              <span>Bitrix24 Helper</span>
+            <button className="header__button-bitrix button-gradient">
+              <span className="text">{t.actions.bitrixHelp}</span>
             </button>
-            <button className="header__button-plans stack align-center">
-              <span className="header__button-plans-icon stack center">
+            <button className="header__button button-purple header__button--plans stack align-center">
+              <span className="icon stack center">
                 <img
                   src="/img/ui/price-button-star.svg"
                   width="24"
@@ -22,10 +25,10 @@ export const Header = () => {
               </span>
 
               <span className="header__button-plans-text">
-                Plans and Pricing
+                {t.actions.plans}
               </span>
             </button>
-            <button className="header__button-consult">Our Consultants</button>
+            <button className="button-purple">{t.actions.consult}</button>
           </div>
         </div>
       </Container>

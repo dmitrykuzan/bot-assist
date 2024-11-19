@@ -5,23 +5,53 @@
   overflow: hidden;
   margin-top: 4rem;
   padding-bottom: 5rem;
-  height: 100vh;
+
+  &__wrapper {
+    gap: 2.5rem;
+  }
 
   &__chat {
     display: flex;
     flex-direction: column;
     border: 0.1rem solid var(--clr-default-200);
     border-radius: 2rem;
-    padding-right: 5rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 3rem;
     padding-left: 5rem;
+    width: 100%;
     min-height: 84rem;
     max-width: 96rem;
     background-color: var(--clr-default-250);
     backdrop-filter: blur(2rem);
 
+    &-content {
+      margin-bottom: 2rem;
+      padding-top: 2rem;
+
+      .wrapper-scroll {
+        padding-right: 5rem;
+        padding-bottom: 1rem;
+        max-height: 71rem;
+      }
+
+      .simplebar-scrollbar:before {
+        border-radius: 0.3rem;
+        width: 0.6rem;
+        background-color: rgb(227 227 227);
+        opacity: 1;
+      }
+
+      .simplebar-scrollbar.simplebar-visible:before {
+        opacity: 1;
+      }
+
+      .simplebar-track {
+        right: 0.3rem;
+      }
+    }
+
     &-navigation {
       margin-top: auto;
+      padding-right: 5rem;
 
       &-wrapper {
         gap: 2rem;
@@ -152,12 +182,131 @@
       line-height: 132%;
       color: var(--clr-default-120);
     }
+
+    //guide
+    &-guide {
+      gap: 5rem;
+      padding-top: 15rem;
+    }
+
+    &-user-message {
+      position: relative;
+      margin-left: auto;
+      border-radius: 2rem 2rem 0 2rem;
+      padding-top: 2rem;
+      padding-right: 1.5rem;
+      padding-bottom: 2rem;
+      padding-left: 1.5rem;
+      max-width: 40rem;
+      font-size: 1.4rem;
+      line-height: 132%;
+      background-color: var(--clr-default-120);
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -16px;
+        border: 0 solid transparent;
+        border-top: 20px solid var(--clr-default-120);
+        border-right-width: 0px;
+        border-left-width: 23px;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &-bot-message {
+      gap: 1.5rem;
+    }
+
+    &-bot-message-info {
+      gap: 2.5rem;
+
+      p {
+        line-height: 132%;
+      }
+    }
+
+    &-bot-answer {
+      gap: 2.5rem;
+    }
+
+    &-bot-avatar {
+      flex-shrink: 0;
+      max-width: 4rem;
+    }
+
+    &-bot-list {
+      gap: 1.5rem;
+      padding-left: 1.5rem;
+
+      li {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 150%;
+      }
+
+      &.numeric {
+        list-style: numeric;
+      }
+
+      &.disc {
+        list-style: disc;
+      }
+    }
+
+    &-bot-sublist {
+      list-style: disc;
+      padding-left: 6rem;
+
+      li {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 150%;
+      }
+
+      &--bold {
+        padding-left: 3rem;
+
+        li {
+          font-weight: 500;
+        }
+      }
+    }
+
+    &-bot-help {
+      gap: 1.5rem;
+    }
+
+    &-bot-help-button {
+      max-width: 18rem;
+
+      .text {
+        gap: 0.8rem;
+      }
+    }
+
+    &-bot-buttons {
+      gap: 2.5rem;
+    }
+
+    &-bot-button {
+      .text {
+        gap: 0.8rem;
+      }
+    }
+
+    &-bot-help-description {
+      font-size: 1.4rem;
+      line-height: 132%;
+    }
   }
 
   //hello
   &__hello {
     gap: 6rem;
-    padding-top: 14rem;
+    padding-top: 12rem;
 
     &-info {
       gap: 2rem;
