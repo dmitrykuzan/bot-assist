@@ -4,6 +4,7 @@ export * from "./language";
 export * from "./theme";
 export * from "./input";
 export * from "./textarea";
+export * from "./dropdown";
 export * from "./checkbox";
 export * from "./container";
 export * from "./typography";

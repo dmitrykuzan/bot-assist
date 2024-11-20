@@ -1,12 +1,19 @@
-import { CheckBox, Input, TextArea, Typography } from "@components/ui";
-import { useOnClickOutside, useTranslation } from "@hooks";
 import { useEffect, useRef, useState } from "react";
+import {
+  CheckBox,
+  Dropdown,
+  Input,
+  TextArea,
+  Typography,
+} from "@components/ui";
+import { useOnClickOutside, useTranslation } from "@hooks";
 
 export const ModalPrice = (props) => {
   //**props
   const { active, setActive } = props;
 
   //** checkbox
+  const [isCheckedBitrix, setIsCheckedBitrix] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
   //** body add class
@@ -45,7 +52,7 @@ export const ModalPrice = (props) => {
             className="modal__close"
             onClick={() => setActive(false)}
           ></button>
-          <div className="modal-price__text">
+          <div className="modal-price__text stack column">
             <Typography tag="h2" variant="h2" weight="400">
               {t.title.pricingPlans}
             </Typography>
@@ -54,7 +61,8 @@ export const ModalPrice = (props) => {
             </Typography>
             <Typography
               tag="p"
-              className="modal-price__description"
+              className="modal-price__subtitle"
+              weight="500"
               dangerouslySetInnerHTML={{
                 __html: t.subtitle.supportConsult.replace(
                   /\{\{([^}]*)\}\}/g,
@@ -65,10 +73,22 @@ export const ModalPrice = (props) => {
               }}
             ></Typography>
           </div>
-          <form className="modal-price__form">
+          <div className="modal-price__dropdown stack align-center">
+            <Dropdown
+              label={t.actions.fullName}
+              options={["Value", "Value1", "Value2"]}
+              initialValue="Value"
+            />
+            <Dropdown
+              label={t.actions.periodLicence}
+              options={["Value", "Value1", "Value2"]}
+              initialValue="Value"
+            />
+          </div>
+          <form className="modal-price__form stack column">
             <CheckBox
-              isChecked={isChecked}
-              onChange={() => setIsChecked(!isChecked)}
+              isChecked={isCheckedBitrix}
+              onChange={() => setIsCheckedBitrix(!isCheckedBitrix)}
               label={t.actions.selectBitrix}
             />
 
@@ -99,6 +119,14 @@ export const ModalPrice = (props) => {
                 type="text"
               />
             </div>
+            <CheckBox
+              isChecked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
+              label={t.actions.iconfirm}
+            />
+            <button className="modal-consult__submit button-dark" type="submit">
+              {t.actions.submit}
+            </button>
           </form>
         </div>
       </div>

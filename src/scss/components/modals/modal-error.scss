@@ -1,0 +1,24 @@
+.modal-error {
+  max-width: 37rem;
+
+  &__wrapper {
+    gap: 2rem;
+  }
+
+  &__title {
+    span {
+      text-transform: uppercase;
+      color: var(--clr-system-500);
+    }
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 132%;
+  }
+
+  &__submit {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -5,6 +5,11 @@ export const subtitle = {
     extranet: "Extranet Users: External users from Extranet groups.",
     crmContact: 'CRM Contacts: Choose "Mine" or "All" and specify the number.',
     tickBoxes: "Tick the boxes next to the contacts you want.",
+    wrong: "Something went wrong. Please try submitting the form again.",
+    thankYou:
+      "Thank you! Your form has been submitted. We’ll be in touch shortly.",
+    detected:
+      "We've detected that your country is France. Would you like to continue in French?",
     supportConsult:
       "In the meantime, {{you can purchase a license}} through our support consultant.",
     allPlans:

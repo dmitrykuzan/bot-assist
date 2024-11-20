@@ -42,16 +42,21 @@ export const Hello = () => {
               alt="Icon cash"
             />
           </div>
-          <Typography
-            className="hero__list-item-title"
-            tag="h3"
-            weight="400"
-            center
-          >
-            {t.title.paymentsAndSub}
-          </Typography>
+          <div className="hero__list-item-text stack column">
+            <Typography
+              className="hero__list-item-title"
+              tag="h3"
+              weight="400"
+              center
+            >
+              {t.title.paymentsAndSub}
+            </Typography>
+            <Typography className="hero__list-item-description" tag="p" center>
+              {t.subtitle.needHelp}
+            </Typography>
+          </div>
         </li>
-        <li className="hero__list-item hero__list-item--middle stack align-center column">
+        <li className="hero__list-item  stack align-center column">
           <div className="hero__list-item-image">
             <img
               src="/img/hero/document.svg"
@@ -83,14 +88,19 @@ export const Hello = () => {
               alt="Icon document"
             />
           </div>
-          <Typography
-            className="hero__list-item-title"
-            tag="h3"
-            weight="400"
-            center
-          >
-            {t.title.updates}
-          </Typography>
+          <div className="hero__list-item-text stack column">
+            <Typography
+              className="hero__list-item-title"
+              tag="h3"
+              weight="400"
+              center
+            >
+              {t.title.updates}
+            </Typography>
+            <Typography className="hero__list-item-description" tag="p" center>
+              {t.subtitle.needHelp}
+            </Typography>
+          </div>
         </li>
       </ul>
     </div>

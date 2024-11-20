@@ -47,7 +47,12 @@ export const ModalConsult = (props) => {
           ></button>
 
           <div className="modal-consult__text stack column">
-            <Typography tag="h2" variant="h2" weight="500">
+            <Typography
+              className="modal-consult__title"
+              tag="h2"
+              variant="h2"
+              weight="500"
+            >
               {t.title.consultant}
             </Typography>
             <Typography className="modal-consult__description" tag="p">

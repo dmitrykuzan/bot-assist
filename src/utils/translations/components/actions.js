@@ -2,7 +2,12 @@ export const actions = {
   en: {
     en: "EN",
     book: "Book a consultation",
+    continueFr: "Continue in French",
+    keepEng: "Keep English",
     ask: "Ask a question about CRM setup",
+    ok: "OK",
+
+    retry: "Retry",
     bitrixHelp: "Bitrix24 Helper",
     plans: "Plans and Pricing",
     consult: "Our Consultants",
@@ -21,8 +26,12 @@ export const actions = {
     billingQuestions: "Name of person for billing questions",
     emailInvoice: "Email for the invoice",
     fullName: "Full Name",
+    periodLicence: "Period for licence purchase",
+    chooseTarif: "Choose tarif",
     message: "Message",
     submit: "Submit",
     selectBitrix: "Select if you have Bitrix24 already",
+    iconfirm:
+      "I confirm that the information provided is accurate and agree to the terms and conditions.",
   },
 };

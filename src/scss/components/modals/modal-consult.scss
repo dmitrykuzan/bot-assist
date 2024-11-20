@@ -1,10 +1,15 @@
 .modal-consult {
+  max-width: 67rem;
   .modal__content-wrapper {
     gap: 2.4rem;
   }
 
   &__text {
     gap: 1.5rem;
+  }
+
+  &__title {
+    padding-right: 3.5rem;
   }
 
   &__description {
