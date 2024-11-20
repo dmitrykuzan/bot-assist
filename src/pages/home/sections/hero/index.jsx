@@ -5,7 +5,11 @@ import { Panel } from "@components/sections";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 
-export const Hero = () => {
+export const Hero = (props) => {
+  //props
+  const { setModalSendHistoryActive } = props;
+
+  //translations
   const t = useTranslation();
 
   return (
@@ -268,7 +272,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <Panel />
+          <Panel setModalSendHistoryActive={setModalSendHistoryActive} />
         </div>
       </Container>
       <span className="hero__decor-bottom"></span>

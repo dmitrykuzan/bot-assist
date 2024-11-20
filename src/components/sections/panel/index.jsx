@@ -4,7 +4,10 @@ import { useTranslation } from "@hooks";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 
-export const Panel = () => {
+export const Panel = (props) => {
+  //props
+  const { setModalSendHistoryActive } = props;
+
   const t = useTranslation();
 
   const [searchActive, setSearchActive] = useState(false);
@@ -211,7 +214,10 @@ export const Panel = () => {
         </div>
 
         <div className="panel__chat-bottom stack column">
-          <button className="panel__chat-bottom-btn button-gradient">
+          <button
+            className="panel__chat-bottom-btn button-gradient"
+            onClick={() => setModalSendHistoryActive(true)}
+          >
             <span className="text stack">
               <span className="text">
                 <span className="icon">

@@ -1,0 +1,40 @@
+.checkbox {
+  &-label {
+    position: relative;
+    gap: 1.2rem;
+    height: 2rem;
+  }
+
+  &-input {
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+  }
+
+  &-fake {
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 0.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--clr-default-400);
+    transition: background-color var(--transition);
+    cursor: pointer;
+
+    svg {
+      opacity: 0;
+    }
+  }
+
+  &-text {
+    font-size: 1.2rem;
+    line-height: 135%;
+  }
+
+  &-input:checked + &-fake {
+    svg {
+      opacity: 1;
+      transition: opacity var(--transition);
+    }
+  }
+}

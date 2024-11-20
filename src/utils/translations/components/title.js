@@ -3,8 +3,12 @@ export const title = {
     hello: "Hello!",
     paymentsAndSub: "Payments and Subscriptions",
     supportAndDocument: "Support and Documentation",
+    sendHistory: "Send chat history to email",
+    consultant: "Consultant selection will be available soon! ",
     updates: "Updates and Improvements",
     reached: "You’ve reached your limit of free queries.",
+    stayTuned: "Stay tuned!",
+    pricingPlans: "Pricing plans are coming soon!",
     fullguide:
       "A full guide on setting up synchronization is available in the following articles:",
     chatHistory: "Chat history",

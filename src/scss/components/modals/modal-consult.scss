@@ -1,0 +1,46 @@
+.modal-consult {
+  .modal__content-wrapper {
+    gap: 2.4rem;
+  }
+
+  &__text {
+    gap: 1.5rem;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 132%;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background: linear-gradient(
+      125.39deg,
+      rgb(149, 102, 254),
+      rgb(251, 199, 212)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  &__form {
+    gap: 2.4rem;
+  }
+
+  &__form-fields {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    .textarea {
+      grid-column: 1/3;
+    }
+  }
+
+  &__submit {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

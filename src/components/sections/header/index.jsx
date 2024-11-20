@@ -1,7 +1,9 @@
 import { Container, Logo } from "@components/ui";
 import { useTranslation } from "@hooks";
 
-export const Header = () => {
+export const Header = (props) => {
+  const { setModalConsultActive, setModalPriceActive } = props;
+
   const t = useTranslation();
 
   return (
@@ -14,7 +16,10 @@ export const Header = () => {
             <button className="header__button-bitrix button-gradient">
               <span className="text">{t.actions.bitrixHelp}</span>
             </button>
-            <button className="header__button button-purple header__button--plans stack align-center">
+            <button
+              className="header__button button-purple header__button--plans stack align-center"
+              onClick={() => setModalPriceActive(true)}
+            >
               <span className="icon stack center">
                 <img
                   src="/img/ui/price-button-star.svg"
@@ -28,7 +33,12 @@ export const Header = () => {
                 {t.actions.plans}
               </span>
             </button>
-            <button className="button-purple">{t.actions.consult}</button>
+            <button
+              className="button-purple"
+              onClick={() => setModalConsultActive(true)}
+            >
+              {t.actions.consult}
+            </button>
           </div>
         </div>
       </Container>

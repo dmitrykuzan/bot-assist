@@ -8,7 +8,6 @@ export const Typography = (props) => {
     variant,
     upperCase,
     center,
-    dangerouslySetInnerHTML,
     children,
     ...rest
   } = props;

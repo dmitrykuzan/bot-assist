@@ -5,6 +5,12 @@ export const subtitle = {
     extranet: "Extranet Users: External users from Extranet groups.",
     crmContact: 'CRM Contacts: Choose "Mine" or "All" and specify the number.',
     tickBoxes: "Tick the boxes next to the contacts you want.",
+    supportConsult:
+      "In the meantime, {{you can purchase a license}} through our support consultant.",
+    allPlans:
+      "We're putting together a clear and friendly guide to all the plans for our app and the Bitrix24 license. ",
+    directly:
+      "In the meantime, fill out the form, and our consultants will reach out to you directly. ",
     queryLimit:
       "It looks like you’ve reached your query limit! To continue, you can either increase your plan limits or schedule a consultation with one of our specialists.",
     synchCardDav:

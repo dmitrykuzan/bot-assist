@@ -28,7 +28,9 @@ $containerWidth: 131.5rem;
   // Colors
   --clr-default-100: #fff;
   --clr-default-120: #fcfcfc;
+  --clr-default-160: #d9d9d9;
   --clr-default-170: #c8c8c8;
+  --clr-default-175: #b3b3b3;
   --clr-default-180: #888888;
   --clr-default-200: rgba(255, 255, 255, 0.6);
   --clr-default-250: rgba(255, 255, 255, 0.3);
@@ -110,6 +112,9 @@ main {
 @import "./stack";
 @import "./components/ui/language";
 @import "./components/ui/theme";
+@import "./components/ui/input";
+@import "./components/ui/textarea";
+@import "./components/ui/checkbox";
 @import "./components/ui/typography";
 @import "./components/ui/logo";
 // Components - UI
@@ -123,8 +128,11 @@ main {
 @import "./components/sections/panel";
 // Components - Sections
 
-// Components - Common
-// Components - Common
+// Components - Modal
+@import "./components/modals/modal";
+@import "./components/modals/modal-send-history";
+@import "./components/modals/modal-consult";
+// Components - Modal
 
 // Components - Pages
 @import "./components/pages/home/hero";

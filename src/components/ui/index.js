@@ -2,5 +2,8 @@ export * from "./logo";
 export * from "./menu";
 export * from "./language";
 export * from "./theme";
+export * from "./input";
+export * from "./textarea";
+export * from "./checkbox";
 export * from "./container";
 export * from "./typography";

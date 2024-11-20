@@ -1,0 +1,30 @@
+.input {
+  gap: 0.8rem;
+
+  &__label {
+    line-height: 140%;
+  }
+
+  &__wrapper {
+    border: 0.1rem solid var(--clr-default-160);
+    border-radius: 0.8rem;
+    background-color: var(--clr-default-100);
+    transition: border var(--transition);
+
+    input {
+      outline: none;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      width: 100%;
+      min-height: 4rem;
+
+      &::placeholder {
+        color: var(--clr-default-175);
+      }
+    }
+
+    &:focus-within {
+      border: 0.1rem solid var(--clr-default-180);
+    }
+  }
+}
