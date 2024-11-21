@@ -1,6 +1,15 @@
 .modal-price {
   .modal__content-wrapper {
     gap: 2.4rem;
+
+    @media (max-width: em(1230)) {
+      overflow: auto;
+      max-height: 60rem;
+    }
+
+    @media (max-width: em(992)) {
+      max-height: 50rem;
+    }
   }
 
   &__description {
@@ -31,6 +40,10 @@
 
   &__dropdown {
     gap: 1.5rem;
+
+    @media (max-width: em(575)) {
+      flex-direction: column;
+    }
   }
 
   &__form {
@@ -51,6 +64,11 @@
       &:nth-child(2) {
         grid-column: 2/3;
       }
+    }
+
+    @media (max-width: em(575)) {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

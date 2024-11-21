@@ -15,7 +15,7 @@ export const Hero = (props) => {
   return (
     <section className="hero">
       <Container>
-        <div className="hero__wrapper stack">
+        <div className="hero__wrapper stack justify-center">
           <div className="hero__chat">
             <div className="hero__chat-content">
               <SimpleBar

@@ -1,9 +1,12 @@
-import { Burger, BurgerMenu, Container, Logo } from "@components/ui";
-import { useTranslation } from "@hooks";
-import { useState } from "react";
+import { useOnClickOutside, useTranslation } from "@hooks";
+import { useRef } from "react";
+import { LoginButton, MainButton, Menu, Logo } from "@components/ui";
+import { Panel } from "@components/sections";
 
-export const Header = (props) => {
+export const BurgerMenu = (props) => {
   const {
+    isMenuOpen,
+    onClose,
     setModalConsultActive,
     setModalPriceActive,
     setModalSendHistoryActive,
@@ -11,28 +14,23 @@ export const Header = (props) => {
 
   const t = useTranslation();
 
-  //**Menu burger state
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const ref = useRef();
 
-  const openMenu = () => {
-    setIsMenuOpen(true);
-  };
+  useOnClickOutside(ref, onClose);
 
   return (
-    <>
-      <BurgerMenu
-        setModalSendHistoryActive={setModalSendHistoryActive}
-        setModalConsultActive={setModalConsultActive}
-        setModalPriceActive={setModalPriceActive}
-        isMenuOpen={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
-      />
-      <header className="header">
-        <Container>
-          <div className="header__wrapper stack justify-space-between align-center">
-            <Logo src="/img/ui/logo.svg" />
-
-            <div className="header__navigation stack align-center">
+    <div
+      ref={ref}
+      className={
+        isMenuOpen ? "burger__menu burger__menu--active" : "burger__menu"
+      }
+    >
+      <div className="burger__menu-wrapper stack column justify-space-between ">
+        <div className="burger__menu-top stack column">
+          <button className="burger__menu-close" onClick={onClose}></button>
+          <div className="burger__menu-header stack column">
+            <Panel setModalSendHistoryActive={setModalSendHistoryActive} />
+            <div className="burger__menu-navigation stack column">
               <button className="header__button-bitrix button-gradient">
                 <span className="text">{t.actions.bitrixHelp}</span>
               </button>
@@ -60,10 +58,9 @@ export const Header = (props) => {
                 {t.actions.consult}
               </button>
             </div>
-            <Burger openMenu={openMenu} isMenuOpen={isMenuOpen} />
           </div>
-        </Container>
-      </header>
-    </>
+        </div>
+      </div>
+    </div>
   );
 };

@@ -9,6 +9,16 @@
 
   &__wrapper {
     gap: 2.5rem;
+
+    @media (max-width: em(1230)) {
+      gap: 1.5rem;
+    }
+
+    @media (max-width: em(1024)) {
+      .panel {
+        display: none;
+      }
+    }
   }
 
   &__chat {
@@ -32,6 +42,10 @@
         padding-right: 5rem;
         padding-bottom: 1rem;
         max-height: 71rem;
+
+        @media (max-width: em(767)) {
+          padding-right: 2rem;
+        }
       }
 
       .simplebar-scrollbar:before {
@@ -56,6 +70,15 @@
 
       &-wrapper {
         gap: 2rem;
+
+        @media (max-width: em(767)) {
+          flex-direction: column-reverse;
+        }
+      }
+
+      @media (max-width: em(767)) {
+        gap: 0.5rem;
+        padding-right: 2rem;
       }
     }
 
@@ -188,6 +211,15 @@
     &-guide {
       gap: 5rem;
       padding-top: 25rem;
+
+      @media (max-width: em(1200)) {
+        padding-top: 15rem;
+      }
+
+      @media (max-width: em(767)) {
+        gap: 3rem;
+        padding-top: 5rem;
+      }
     }
 
     &-user-message {
@@ -215,6 +247,13 @@
         width: 0;
         height: 0;
       }
+
+      @media (max-width: em(575)) {
+        padding-top: 1.5rem;
+        padding-right: 1rem;
+        padding-bottom: 1.5rem;
+        padding-left: 1rem;
+      }
     }
 
     &-bot-message {
@@ -225,12 +264,18 @@
       gap: 2.5rem;
 
       p {
+        font-size: 1.4rem;
         line-height: 132%;
       }
     }
 
     &-bot-answer {
       gap: 2.5rem;
+
+      @media (max-width: em(767)) {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
     }
 
     &-bot-avatar {
@@ -244,7 +289,7 @@
 
       li {
         font-weight: 500;
-        font-size: 2rem;
+        font-size: fluid(2rem, 1.6rem);
         line-height: 150%;
       }
 
@@ -255,6 +300,10 @@
       &.disc {
         list-style: disc;
       }
+
+      @media (max-width: em(575)) {
+        padding-left: 2.3rem;
+      }
     }
 
     &-bot-sublist {
@@ -263,7 +312,7 @@
 
       li {
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: fluid(1.6rem, 1.4rem);
         line-height: 150%;
       }
 
@@ -290,6 +339,11 @@
 
     &-bot-buttons {
       gap: 2.5rem;
+
+      @media (max-width: em(575)) {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
 
     &-bot-button {
@@ -302,6 +356,27 @@
       font-size: 1.4rem;
       line-height: 132%;
     }
+
+    @media (max-width: em(1340)) {
+      max-width: 85rem;
+    }
+
+    @media (max-width: em(1230)) {
+      max-width: 75rem;
+    }
+
+    @media (max-width: em(1120)) {
+      max-width: 65rem;
+    }
+
+    @media (max-width: em(1024)) {
+      max-width: initial;
+    }
+
+    @media (max-width: em(767)) {
+      padding-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
   }
 
   //hello
@@ -311,10 +386,18 @@
 
     &-info {
       gap: 2rem;
+
+      @media (max-width: em(767)) {
+        gap: 1rem;
+      }
     }
 
     &-text {
       gap: 1.5rem;
+
+      @media (max-width: em(767)) {
+        gap: 1rem;
+      }
     }
 
     &-title {
@@ -340,6 +423,16 @@
       font-size: fluid(1.8rem, 1.6rem);
       line-height: 132%;
       color: var(--clr-default-450);
+    }
+
+    @media (max-width: em(1200)) {
+      gap: 4rem;
+      padding-top: 8rem;
+    }
+
+    @media (max-width: em(767)) {
+      gap: 2rem;
+      padding-top: 5rem;
     }
   }
 
@@ -398,6 +491,10 @@
         }
       }
     }
+
+    @media (max-width: em(400)) {
+      flex-direction: column;
+    }
   }
   //hello
 
@@ -433,5 +530,14 @@
     &::after {
       right: -44rem;
     }
+  }
+
+  @media (max-width: em(1760)) {
+    height: initial;
+  }
+
+  @media (max-width: em(1300)) {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
   }
 }

@@ -3,6 +3,7 @@ import {
   ModalError,
   ModalLanguage,
   ModalPrice,
+  ModalSendHistory,
   ModalSuccess,
 } from "@components/modals";
 import { Footer, Header } from "@components/sections";
@@ -16,12 +17,14 @@ export const MainLayuot = (props) => {
   const [modalLanguageActive, setModalLanguageActive] = useState(false);
   const [modalSuccessActive, setModalSuccessActive] = useState(false);
   const [modalErrorActive, setModalErrorActive] = useState(false);
+  const [modalSendHistoryActive, setModalSendHistoryActive] = useState(false);
 
   return (
     <div className={overflow ? "wrapper overflow" : "wrapper"}>
       <Header
         setModalConsultActive={setModalConsultActive}
         setModalPriceActive={setModalPriceActive}
+        setModalSendHistoryActive={setModalSendHistoryActive}
       />
       <main>{children}</main>
       <Footer className={className} />
@@ -39,7 +42,10 @@ export const MainLayuot = (props) => {
         active={modalSuccessActive}
         setActive={setModalSuccessActive}
       />
-
+      <ModalSendHistory
+        active={modalSendHistoryActive}
+        setActive={setModalSendHistoryActive}
+      />
       <ModalError active={modalErrorActive} setActive={setModalErrorActive} />
     </div>
   );

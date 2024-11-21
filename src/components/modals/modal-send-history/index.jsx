@@ -62,7 +62,12 @@ export const ModalSendHistory = (props) => {
           ></button>
 
           <form className="modal-send__history-form stack column">
-            <Typography tag="h3" variant="h2" weight="500">
+            <Typography
+              className="modal-send__history-title"
+              tag="h3"
+              variant="h2"
+              weight="500"
+            >
               {t.title.sendHistory}
             </Typography>
             <div className="modal-send__history-form-fields stack column">

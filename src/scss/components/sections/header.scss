@@ -7,6 +7,10 @@
 
   &__navigation {
     gap: 2.5rem;
+
+    @media (max-width: em(1024)) {
+      display: none;
+    }
   }
 
   &__button-bitrix {
@@ -26,5 +30,9 @@
         width: 2.4rem;
       }
     }
+  }
+
+  @media (max-width: em(1300)) {
+    margin-top: 1rem;
   }
 }
