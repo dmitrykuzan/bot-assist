@@ -91,12 +91,13 @@ export const Hero = (props) => {
                       </ol>
 
                       <ul className="hero__chat-bot-list disc">
-                        <li>{t.title.additional}</li>
-
-                        <ul className="hero__chat-bot-sublist">
-                          <li>{t.subtitle.thirdParty}</li>
-                          <li>{t.subtitle.synchCardDav}</li>
-                        </ul>
+                        <li>
+                          {t.title.additional}
+                          <ul className="hero__chat-bot-sublist">
+                            <li>{t.subtitle.thirdParty}</li>
+                            <li>{t.subtitle.synchCardDav}</li>
+                          </ul>
+                        </li>
                       </ul>
 
                       <div className="hero__chat-bot-help stack column">
