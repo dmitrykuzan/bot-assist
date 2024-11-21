@@ -6,7 +6,7 @@ export const actions = {
     keepEng: "Keep English",
     ask: "Ask a question about CRM setup",
     ok: "OK",
-
+    terms: "Terms Condition",
     retry: "Retry",
     bitrixHelp: "Bitrix24 Helper",
     plans: "Plans and Pricing",

@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Header } from "@components/sections";
 import {
   ModalConsult,
   ModalError,
@@ -6,10 +8,8 @@ import {
   ModalSendHistory,
   ModalSuccess,
 } from "@components/modals";
-import { Footer, Header } from "@components/sections";
-import { useState } from "react";
 
-export const MainLayuot = (props) => {
+export const MainLayout = (props) => {
   const { overflow = true, children, className = "" } = props;
 
   const [modalConsultActive, setModalConsultActive] = useState(false);
@@ -26,8 +26,8 @@ export const MainLayuot = (props) => {
         setModalPriceActive={setModalPriceActive}
         setModalSendHistoryActive={setModalSendHistoryActive}
       />
+
       <main>{children}</main>
-      <Footer className={className} />
 
       <ModalConsult
         active={modalConsultActive}

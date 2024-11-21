@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { MainLayuot } from "@layouts";
+import { MainLayout } from "@layouts";
 import { Home } from "@pages/home";
 
 const Page = () => {
@@ -8,12 +8,17 @@ const Page = () => {
       <Head>
         <title>Bot Assist</title>
         <meta name="description" content="description" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+
+        <meta property="og:url" content="" />
       </Head>
       <Home />
     </>
   );
 };
 
-Page.getLayout = (page) => <MainLayuot overflow={false}>{page}</MainLayuot>;
+Page.getLayout = (page) => <MainLayout overflow={false}>{page}</MainLayout>;
 
 export default Page;

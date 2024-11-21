@@ -1,6 +1,5 @@
 import { useOnClickOutside, useTranslation } from "@hooks";
 import { useRef } from "react";
-import { LoginButton, MainButton, Menu, Logo } from "@components/ui";
 import { Panel } from "@components/sections";
 
 export const BurgerMenu = (props) => {

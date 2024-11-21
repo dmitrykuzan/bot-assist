@@ -1,8 +1,8 @@
-import { Typography } from "@components/ui";
+import { useRef, useState } from "react";
 import { useOnClickOutside, useTranslation } from "@hooks";
 import { useRouter } from "next/router";
-import { useRef, useState } from "react";
 import { setCookie } from "cookies-next";
+import { Typography } from "@components/ui";
 
 export const Language = () => {
   //translation
