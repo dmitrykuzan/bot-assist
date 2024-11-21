@@ -27,7 +27,7 @@ export const CheckBox = (props) => {
             />
           </svg>
         </span>
-        <Typography className="checkbox-text" tag="p">
+        <Typography className="checkbox-text" tag="div">
           {label}
         </Typography>
       </label>

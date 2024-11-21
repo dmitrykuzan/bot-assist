@@ -49,53 +49,39 @@ export const Hero = (props) => {
                       </div>
 
                       <ol className="hero__chat-bot-list numeric stack column">
-                        <li>
-                          {t.title.cessing}
+                        <li>{t.title.cessing}</li>
+                        <ul className="hero__chat-bot-sublist">
+                          <li>{t.subtitle.openMyPage}</li>
+                          <li>{t.subtitle.security}</li>
+                        </ul>
 
-                          <ul className="hero__chat-bot-sublist">
-                            <li>{t.subtitle.openMyPage}</li>
-                            <li>{t.subtitle.security}</li>
-                          </ul>
-                        </li>
+                        <li>{t.title.selectContact}</li>
+                        <ul className="hero__chat-bot-sublist hero__chat-bot-sublist--bold">
+                          <li>{t.title.wantToSync}</li>
+                        </ul>
 
-                        <li>
-                          {t.title.selectContact}
+                        <ul className="hero__chat-bot-sublist">
+                          <li>{t.subtitle.systemUser}</li>
+                          <li>{t.subtitle.extranet}</li>
+                          <li>{t.subtitle.crmContact}</li>
+                          <li>{t.subtitle.crmCompanies}</li>
+                        </ul>
 
-                          <ul className="hero__chat-bot-sublist hero__chat-bot-sublist--bold">
-                            <li>{t.title.wantToSync}</li>
-                          </ul>
+                        <li>{t.title.default}</li>
+                        <ul className="hero__chat-bot-sublist">
+                          <li>{t.subtitle.synchDefault}</li>
+                        </ul>
 
-                          <ul className="hero__chat-bot-sublist">
-                            <li>{t.subtitle.systemUser}</li>
-                            <li>{t.subtitle.extranet}</li>
-                            <li>{t.subtitle.crmContact}</li>
-                            <li>{t.subtitle.crmCompanies}</li>
-                          </ul>
-                        </li>
+                        <li>{t.title.saving}</li>
 
-                        <li>
-                          {t.title.default}
+                        <ul className="hero__chat-bot-sublist">
+                          <li>{t.subtitle.tickBoxes}</li>
+                        </ul>
 
-                          <ul className="hero__chat-bot-sublist">
-                            <li>{t.subtitle.synchDefault}</li>
-                          </ul>
-                        </li>
-
-                        <li>
-                          {t.title.saving}
-
-                          <ul className="hero__chat-bot-sublist">
-                            <li>{t.subtitle.tickBoxes}</li>
-                          </ul>
-                        </li>
-
-                        <li>
-                          {t.title.device}
-
-                          <ul className="hero__chat-bot-sublist">
-                            <li>{t.subtitle.following}</li>
-                          </ul>
-                        </li>
+                        <li>{t.title.device}</li>
+                        <ul className="hero__chat-bot-sublist">
+                          <li>{t.subtitle.following}</li>
+                        </ul>
                       </ol>
 
                       <ul className="hero__chat-bot-list disc">
@@ -106,6 +92,8 @@ export const Hero = (props) => {
                           <li>{t.subtitle.synchCardDav}</li>
                         </ul>
                       </ul>
+
+                      {/* //--- */}
 
                       <div className="hero__chat-bot-help stack column">
                         <Typography
