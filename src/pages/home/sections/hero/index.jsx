@@ -48,41 +48,6 @@ export const Hero = (props) => {
                         <Typography tag="p">{t.subtitle.cardDav}</Typography>
                       </div>
 
-                      {/* <ol className="hero__chat-bot-list numeric stack column">
-                        <li>{t.title.cessing}</li>
-                        <ul className="hero__chat-bot-sublist">
-                          <li>{t.subtitle.openMyPage}</li>
-                          <li>{t.subtitle.security}</li>
-                        </ul>
-
-                        <li>{t.title.selectContact}</li>
-                        <ul className="hero__chat-bot-sublist hero__chat-bot-sublist--bold">
-                          <li>{t.title.wantToSync}</li>
-                        </ul>
-
-                        <ul className="hero__chat-bot-sublist">
-                          <li>{t.subtitle.systemUser}</li>
-                          <li>{t.subtitle.extranet}</li>
-                          <li>{t.subtitle.crmContact}</li>
-                          <li>{t.subtitle.crmCompanies}</li>
-                        </ul>
-
-                        <li>{t.title.default}</li>
-                        <ul className="hero__chat-bot-sublist">
-                          <li>{t.subtitle.synchDefault}</li>
-                        </ul>
-
-                        <li>{t.title.saving}</li>
-
-                        <ul className="hero__chat-bot-sublist">
-                          <li>{t.subtitle.tickBoxes}</li>
-                        </ul>
-
-                        <li>{t.title.device}</li>
-                        <ul className="hero__chat-bot-sublist">
-                          <li>{t.subtitle.following}</li>
-                        </ul>
-                      </ol> */}
                       <ol className="hero__chat-bot-list numeric stack column">
                         <li>
                           {t.title.cessing}
@@ -125,14 +90,15 @@ export const Hero = (props) => {
                         </li>
                       </ol>
 
-                      {/* <ul className="hero__chat-bot-list disc">
+                      <ul className="hero__chat-bot-list disc">
                         <li>{t.title.additional}</li>
-
-                        <ul className="hero__chat-bot-sublist">
-                          <li>{t.subtitle.thirdParty}</li>
-                          <li>{t.subtitle.synchCardDav}</li>
-                        </ul>
-                      </ul> */}
+                        <div>
+                          <ul className="hero__chat-bot-sublist">
+                            <li>{t.subtitle.thirdParty}</li>
+                            <li>{t.subtitle.synchCardDav}</li>
+                          </ul>
+                        </div>
+                      </ul>
 
                       <div className="hero__chat-bot-help stack column">
                         <Typography
