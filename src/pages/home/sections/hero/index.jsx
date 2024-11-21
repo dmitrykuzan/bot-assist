@@ -93,15 +93,17 @@ export const Hero = (props) => {
                         </li>
                         <li>
                           {t.title.selectContact}
-                          <ul className="hero__chat-bot-sublist hero__chat-bot-sublist--bold">
-                            <li>{t.title.wantToSync}</li>
-                          </ul>
-                          <ul className="hero__chat-bot-sublist">
-                            <li>{t.subtitle.systemUser}</li>
-                            <li>{t.subtitle.extranet}</li>
-                            <li>{t.subtitle.crmContact}</li>
-                            <li>{t.subtitle.crmCompanies}</li>
-                          </ul>
+                          <div>
+                            <ul className="hero__chat-bot-sublist hero__chat-bot-sublist--bold">
+                              <li>{t.title.wantToSync}</li>
+                            </ul>
+                            <ul className="hero__chat-bot-sublist">
+                              <li>{t.subtitle.systemUser}</li>
+                              <li>{t.subtitle.extranet}</li>
+                              <li>{t.subtitle.crmContact}</li>
+                              <li>{t.subtitle.crmCompanies}</li>
+                            </ul>
+                          </div>
                         </li>
                         <li>
                           {t.title.default}
@@ -123,14 +125,14 @@ export const Hero = (props) => {
                         </li>
                       </ol>
 
-                      <ul className="hero__chat-bot-list disc">
+                      {/* <ul className="hero__chat-bot-list disc">
                         <li>{t.title.additional}</li>
 
                         <ul className="hero__chat-bot-sublist">
                           <li>{t.subtitle.thirdParty}</li>
                           <li>{t.subtitle.synchCardDav}</li>
                         </ul>
-                      </ul>
+                      </ul> */}
 
                       <div className="hero__chat-bot-help stack column">
                         <Typography
