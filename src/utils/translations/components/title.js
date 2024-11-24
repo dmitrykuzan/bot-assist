@@ -26,4 +26,32 @@ export const title = {
     wantToSync:
       "In the “Synchronization” section, choose the contacts you want to sync:",
   },
+
+  ru: {
+    hello: "Привет!",
+    paymentsAndSub: "Платежи и подписки",
+    supportAndDocument: "Поддержка и документация",
+    sendHistory: "Отправить историю чата на email",
+    formSubmit: "Форма отправлена",
+    successfully: "Успешно",
+    consultant: "Выбор консультанта будет доступен скоро!",
+    updates: "Обновления и улучшения",
+    reached: "Вы достигли лимита бесплатных запросов.",
+    stayTuned: "Оставайтесь с нами!",
+    pricingPlans: "Тарифные планы скоро появятся!",
+    subError: "Ошибка отправки {{Error}}",
+    fullguide:
+      "Полное руководство по настройке синхронизации доступно в следующих статьях:",
+    chatHistory: "История чата",
+    professional: "Профессиональный",
+    cessing: "Доступ к настройкам",
+    selectContact: "Выбор контактов для синхронизации:",
+    default: "Настройки по умолчанию:",
+    saving: "Сохранение настроек:",
+    device: "Настройка устройства:",
+    additional: "Дополнительная информация:",
+    language: "Выбор языка",
+    wantToSync:
+      "В разделе «Синхронизация» выберите контакты, которые вы хотите синхронизировать:",
+  },
 };
