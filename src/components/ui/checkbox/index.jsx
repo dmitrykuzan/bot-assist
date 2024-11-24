@@ -1,6 +1,5 @@
 import { Typography } from "@components/ui";
 import { useTranslation } from "@hooks";
-import Link from "next/link";
 
 export const CheckBox = (props) => {
   const { isChecked, onChange, name, label, srcLink, textLink } = props;

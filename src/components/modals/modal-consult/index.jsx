@@ -86,6 +86,8 @@ export const ModalConsult = (props) => {
               />
             </div>
             <CheckBox
+              textLink={t.actions.terms}
+              srcLink={"/"}
               isChecked={isChecked}
               onChange={() => setIsChecked(!isChecked)}
               label={t.common.agreeProcessing}
