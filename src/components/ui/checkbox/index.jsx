@@ -2,7 +2,8 @@ import { Typography } from "@components/ui";
 import { useTranslation } from "@hooks";
 
 export const CheckBox = (props) => {
-  const { isChecked, onChange, name, label, srcLink, textLink } = props;
+  const { isChecked, onChange, name, label, srcLink, textLink, required } =
+    props;
 
   const t = useTranslation();
 
@@ -31,8 +32,10 @@ export const CheckBox = (props) => {
           </svg>
         </span>
         <Typography className="checkbox-text" tag="span">
-          {`* ${label}`}
-          <a href={srcLink}>{textLink}</a>
+          {`${required && "*"} ${label}`}
+          <a href={srcLink} target="_blank">
+            {textLink}
+          </a>
         </Typography>
       </label>
     </div>

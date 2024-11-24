@@ -27,9 +27,9 @@ export const actions = {
     billingQuestions: "Name of person for billing questions",
     emailInvoice: "Email for the invoice",
     fullName: "Full Name",
-    periodLicence: "Period for licence purchase",
-    chooseTarif: "Choose tarif",
-    message: "Message",
+    periodLicence: "Period for licence purchase*",
+    chooseTarif: "Choose tarif*",
+    message: "*Message",
     submit: "Submit",
     selectBitrix: "Select if you want to create Bitrix24 account",
     iconfirm:

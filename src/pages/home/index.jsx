@@ -3,6 +3,7 @@ import { Hero } from "./sections";
 import {
   ModalConsult,
   ModalError,
+  ModalLanguage,
   ModalPrice,
   ModalSendHistory,
   ModalSuccess,
@@ -14,6 +15,7 @@ export const Home = () => {
   const [modalConsultActive, setModalConsultActive] = useState(false);
   const [modalSuccessActive, setModalSuccessActive] = useState(false);
   const [modalErrorActive, setModalErrorActive] = useState(false);
+  const [modalLanguageActive, setModalLanguageActive] = useState(false);
 
   return (
     <>
@@ -23,6 +25,7 @@ export const Home = () => {
         setModalConsultActive={setModalConsultActive}
         setModalSuccessActive={setModalSuccessActive}
         setModalErrorActive={setModalErrorActive}
+        setModalLanguageActive={setModalLanguageActive}
       />
 
       <ModalSendHistory
@@ -34,7 +37,10 @@ export const Home = () => {
         active={modalConsultActive}
         setActive={setModalConsultActive}
       />
-
+      <ModalLanguage
+        active={modalLanguageActive}
+        setActive={setModalLanguageActive}
+      />
       <ModalSuccess
         active={modalSuccessActive}
         setActive={setModalSuccessActive}

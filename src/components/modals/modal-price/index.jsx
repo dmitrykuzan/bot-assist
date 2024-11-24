@@ -82,7 +82,7 @@ export const ModalPrice = (props) => {
           <form className="modal-price__form stack column">
             <CheckBox
               textLink={t.actions.freeLink}
-              srcLink={"/"}
+              srcLink={"https://bitrix24.eu/create.php?p=8966139/"}
               isChecked={isCheckedBitrix}
               onChange={() => setIsCheckedBitrix(!isCheckedBitrix)}
               label={t.actions.selectBitrix}
@@ -126,6 +126,7 @@ export const ModalPrice = (props) => {
               label={t.actions.iconfirm}
               textLink={t.actions.terms}
               srcLink={"/"}
+              required
             />
             <button
               className="modal-consult__submit button-purple"

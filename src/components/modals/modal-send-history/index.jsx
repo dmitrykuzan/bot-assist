@@ -75,6 +75,7 @@ export const ModalSendHistory = (props) => {
               isChecked={isChecked}
               onChange={() => setIsChecked(!isChecked)}
               label={t.common.iagree}
+              required
             />
 
             <button

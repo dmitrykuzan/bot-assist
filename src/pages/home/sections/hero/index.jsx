@@ -13,6 +13,7 @@ export const Hero = (props) => {
     setModalConsultActive,
     setModalSuccessActive,
     setModalErrorActive,
+    setModalLanguageActive,
   } = props;
 
   //translations
@@ -286,6 +287,7 @@ export const Hero = (props) => {
           <Panel
             setModalPriceActive={setModalPriceActive}
             setModalSendHistoryActive={setModalSendHistoryActive}
+            setModalLanguageActive={setModalLanguageActive}
           />
         </div>
       </Container>

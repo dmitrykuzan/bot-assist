@@ -73,11 +73,13 @@ export const ModalConsult = (props) => {
                 label={t.actions.fullName}
                 placeholder={t.actions.value}
                 type="text"
+                required
               />
               <Input
                 label={t.actions.email}
                 placeholder={t.actions.value}
                 type="email"
+                required
               />
               <TextArea
                 label={t.actions.message}
@@ -91,6 +93,7 @@ export const ModalConsult = (props) => {
               isChecked={isChecked}
               onChange={() => setIsChecked(!isChecked)}
               label={t.common.agreeProcessing}
+              required
             />
 
             <button
