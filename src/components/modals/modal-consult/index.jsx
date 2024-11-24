@@ -91,7 +91,10 @@ export const ModalConsult = (props) => {
               label={t.common.agreeProcessing}
             />
 
-            <button className="modal-consult__submit button-dark" type="submit">
+            <button
+              className="modal-consult__submit button-purple"
+              type="submit"
+            >
               {t.actions.submit}
             </button>
           </form>

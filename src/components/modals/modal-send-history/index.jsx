@@ -1,6 +1,5 @@
 import { CheckBox, Input, Typography } from "@components/ui";
 import { useOnClickOutside, useTranslation } from "@hooks";
-import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
 
 export const ModalSendHistory = (props) => {
@@ -30,20 +29,6 @@ export const ModalSendHistory = (props) => {
   //** translation
   const t = useTranslation();
 
-  useEffect(() => {
-    const formContainer = document.getElementById("b24-container");
-    if (formContainer) {
-      formContainer.innerHTML = `
-        <script
-          data-b24-form="inline/87/4mheci"
-          data-skip-moving="true"
-        >(function(w,d,u){
-            var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
-            var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-        })(window,document,'https://cdn.bitrix24.eu/b4256921/crm/form/loader_87.js');</script>`;
-    }
-  }, []);
-
   return (
     <div
       className={
@@ -72,17 +57,21 @@ export const ModalSendHistory = (props) => {
             </Typography>
             <div className="modal-send__history-form-fields stack column">
               <Input
+                required
                 label={t.actions.name}
                 placeholder={t.actions.value}
                 type="text"
               />
               <Input
+                required
                 label={t.actions.email}
                 placeholder={t.actions.value}
                 type="email"
               />
             </div>
             <CheckBox
+              textLink={t.actions.terms}
+              srcLink={"/"}
               isChecked={isChecked}
               onChange={() => setIsChecked(!isChecked)}
               label={t.common.iagree}
@@ -95,18 +84,6 @@ export const ModalSendHistory = (props) => {
               {t.actions.sendToEmail}
             </button>
           </form>
-
-          <div id="b24-container"></div>
-
-          <Script
-            src={`https://cdn.bitrix24.eu/b4256921/crm/form/loader_87.js?${Math.floor(
-              Date.now() / 180000
-            )}`}
-            strategy="lazyOnload"
-            onLoad={() => {
-              console.log("Bitrix24 script loaded");
-            }}
-          />
         </div>
       </div>
     </div>

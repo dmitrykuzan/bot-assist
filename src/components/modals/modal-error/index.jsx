@@ -64,7 +64,7 @@ export const ModalError = (props) => {
               {t.subtitle.wrong}
             </Typography>
 
-            <button className="modal-error__submit button-dark" type="submit">
+            <button className="modal-error__submit button-purple" type="submit">
               {t.actions.retry}
             </button>
           </div>

@@ -58,13 +58,13 @@ export const ModalLanguage = (props) => {
             </div>
             <div className="modal-language__buttons stack align-center">
               <button
-                className="modal-language__submit button-dark"
+                className="modal-language__submit button-purple"
                 type="submit"
               >
                 {t.actions.continueFr}
               </button>
               <button
-                className="modal-language__submit button-dark"
+                className="modal-language__submit button-purple"
                 type="submit"
               >
                 {t.actions.keepEng}

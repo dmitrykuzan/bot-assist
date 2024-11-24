@@ -78,7 +78,7 @@
 
       @media (max-width: em(767)) {
         gap: 0.5rem;
-        padding-right: 2rem;
+        padding-right: 1.5rem;
       }
     }
 
@@ -468,6 +468,11 @@
         line-height: 132%;
         color: var(--clr-default-180);
         transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+
+        @media (max-width: em(575)) {
+          padding-bottom: 1rem;
+          max-height: initial;
+        }
       }
 
       &-text {

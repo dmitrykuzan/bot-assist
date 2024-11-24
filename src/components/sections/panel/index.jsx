@@ -6,7 +6,7 @@ import "simplebar-react/dist/simplebar.min.css";
 
 export const Panel = (props) => {
   //props
-  const { setModalSendHistoryActive } = props;
+  const { setModalSendHistoryActive, setModalPriceActive } = props;
 
   const t = useTranslation();
 
@@ -91,7 +91,7 @@ export const Panel = (props) => {
 
       <div className="panel__options stack align-center justify-space-between">
         <Language />
-        <Theme />
+        {/* <Theme /> */}
       </div>
 
       <div className="panel__chat stack column">
@@ -145,7 +145,7 @@ export const Panel = (props) => {
               </div>
             </div>
 
-            <button className="panel__chat-filter stack center">
+            {/* <button className="panel__chat-filter stack center">
               <svg
                 width="24"
                 height="24"
@@ -161,7 +161,7 @@ export const Panel = (props) => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -293,7 +293,10 @@ export const Panel = (props) => {
             </Typography>
           </div>
 
-          <button className="button-gradient">
+          <button
+            className="button-gradient"
+            onClick={() => setModalPriceActive(true)}
+          >
             <span className="text stack">{t.actions.order}</span>
           </button>
         </div>

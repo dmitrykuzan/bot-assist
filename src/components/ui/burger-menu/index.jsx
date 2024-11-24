@@ -28,7 +28,6 @@ export const BurgerMenu = (props) => {
         <div className="burger__menu-top stack column">
           <button className="burger__menu-close" onClick={onClose}></button>
           <div className="burger__menu-header stack column">
-            <Panel setModalSendHistoryActive={setModalSendHistoryActive} />
             <div className="burger__menu-navigation stack column">
               <button className="header__button-bitrix button-gradient">
                 <span className="text">{t.actions.bitrixHelp}</span>
@@ -57,6 +56,7 @@ export const BurgerMenu = (props) => {
                 {t.actions.consult}
               </button>
             </div>
+            <Panel setModalSendHistoryActive={setModalSendHistoryActive} />
           </div>
         </div>
       </div>

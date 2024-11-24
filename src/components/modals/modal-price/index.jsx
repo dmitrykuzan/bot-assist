@@ -1,11 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  CheckBox,
-  Dropdown,
-  Input,
-  TextArea,
-  Typography,
-} from "@components/ui";
+import { CheckBox, Dropdown, Input, Typography } from "@components/ui";
 import { useOnClickOutside, useTranslation } from "@hooks";
 
 export const ModalPrice = (props) => {
@@ -75,7 +69,7 @@ export const ModalPrice = (props) => {
           </div>
           <div className="modal-price__dropdown stack align-center">
             <Dropdown
-              label={t.actions.fullName}
+              label={t.actions.chooseTarif}
               options={["Value", "Value1", "Value2"]}
               initialValue="Value"
             />
@@ -87,6 +81,8 @@ export const ModalPrice = (props) => {
           </div>
           <form className="modal-price__form stack column">
             <CheckBox
+              textLink={t.actions.freeLink}
+              srcLink={"/"}
               isChecked={isCheckedBitrix}
               onChange={() => setIsCheckedBitrix(!isCheckedBitrix)}
               label={t.actions.selectBitrix}
@@ -94,26 +90,31 @@ export const ModalPrice = (props) => {
 
             <div className="modal-price__form-fields">
               <Input
-                placeholder={t.actions.value}
-                label={t.actions.companyName}
-                type="text"
-              />
-              <Input
+                required
                 placeholder={t.actions.value}
                 label={t.actions.portalAddress}
                 type="text"
               />
               <Input
+                required
+                placeholder={t.actions.value}
+                label={t.actions.companyName}
+                type="text"
+              />
+              <Input
+                required
                 placeholder={t.actions.value}
                 label={t.actions.registrationNumber}
                 type="text"
               />
               <Input
+                required
                 placeholder={t.actions.value}
                 label={t.actions.billingQuestions}
                 type="text"
               />
               <Input
+                required
                 placeholder={t.actions.value}
                 label={t.actions.emailInvoice}
                 type="text"
@@ -123,8 +124,13 @@ export const ModalPrice = (props) => {
               isChecked={isChecked}
               onChange={() => setIsChecked(!isChecked)}
               label={t.actions.iconfirm}
+              textLink={t.actions.terms}
+              srcLink={"/"}
             />
-            <button className="modal-consult__submit button-dark" type="submit">
+            <button
+              className="modal-consult__submit button-purple"
+              type="submit"
+            >
               {t.actions.submit}
             </button>
           </form>

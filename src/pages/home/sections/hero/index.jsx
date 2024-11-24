@@ -7,7 +7,13 @@ import "simplebar-react/dist/simplebar.min.css";
 
 export const Hero = (props) => {
   //props
-  const { setModalSendHistoryActive } = props;
+  const {
+    setModalSendHistoryActive,
+    setModalPriceActive,
+    setModalConsultActive,
+    setModalSuccessActive,
+    setModalErrorActive,
+  } = props;
 
   //translations
   const t = useTranslation();
@@ -111,7 +117,10 @@ export const Hero = (props) => {
                         </Typography>
 
                         <div className="hero__chat-bot-buttons stack">
-                          <button className="hero__chat-bot-button button-gradient">
+                          <button
+                            className="hero__chat-bot-button button-gradient"
+                            onClick={() => setModalSuccessActive(true)}
+                          >
                             <span className="text stack">
                               {t.actions.newChat}
                               <span className="icon stack center">
@@ -140,7 +149,10 @@ export const Hero = (props) => {
                               </span>
                             </span>
                           </button>
-                          <button className="hero__chat-bot-button button-gradient">
+                          <button
+                            className="hero__chat-bot-button button-gradient"
+                            onClick={() => setModalErrorActive(true)}
+                          >
                             <span className="text stack">
                               {t.actions.clean}
                               <span className="icon stack center">
@@ -213,7 +225,10 @@ export const Hero = (props) => {
                           {t.subtitle.queryLimit}
                         </Typography>
 
-                        <button className="hero__chat-bot-help-button button-gradient stack center">
+                        <button
+                          className="hero__chat-bot-help-button button-gradient stack center"
+                          onClick={() => setModalPriceActive(true)}
+                        >
                           <span className="text stack">
                             <span className="icon stack center">
                               <img
@@ -234,7 +249,10 @@ export const Hero = (props) => {
             </div>
             <div className="hero__chat-navigation stack column">
               <div className="hero__chat-navigation-wrapper stack align-center">
-                <button className="hero__chat-button stack align-center">
+                <button
+                  className="hero__chat-button stack align-center"
+                  onClick={() => setModalConsultActive(true)}
+                >
                   <span className="stack center">
                     <img
                       src="/img/hero/call.svg"
@@ -265,7 +283,10 @@ export const Hero = (props) => {
             </div>
           </div>
 
-          <Panel setModalSendHistoryActive={setModalSendHistoryActive} />
+          <Panel
+            setModalPriceActive={setModalPriceActive}
+            setModalSendHistoryActive={setModalSendHistoryActive}
+          />
         </div>
       </Container>
       <span className="hero__decor-bottom"></span>

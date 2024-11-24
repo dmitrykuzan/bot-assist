@@ -3,7 +3,7 @@ import { useTranslation } from "@hooks";
 import Link from "next/link";
 
 export const CheckBox = (props) => {
-  const { isChecked, onChange, name, label } = props;
+  const { isChecked, onChange, name, label, srcLink, textLink } = props;
 
   const t = useTranslation();
 
@@ -32,8 +32,8 @@ export const CheckBox = (props) => {
           </svg>
         </span>
         <Typography className="checkbox-text" tag="span">
-          {label}
-          <Link href="#">{t.actions.terms}</Link>
+          {`* ${label}`}
+          <a href={srcLink}>{textLink}</a>
         </Typography>
       </label>
     </div>

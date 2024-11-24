@@ -71,7 +71,10 @@ export const ModalSuccess = (props) => {
                 {t.subtitle.thankYou}
               </Typography>
             </div>
-            <button className="modal-success__submit button-dark" type="submit">
+            <button
+              className="modal-success__submit button-purple"
+              type="submit"
+            >
               {t.actions.ok}
             </button>
           </div>
