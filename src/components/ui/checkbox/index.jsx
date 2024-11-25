@@ -32,7 +32,7 @@ export const CheckBox = (props) => {
           </svg>
         </span>
         <Typography className="checkbox-text" tag="span">
-          {`${required && "*"} ${label}`}
+          {`${required && required ? "*" : ""} ${label}`}
           <a href={srcLink} target="_blank">
             {textLink}
           </a>

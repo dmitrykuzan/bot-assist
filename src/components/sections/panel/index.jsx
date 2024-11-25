@@ -1,8 +1,13 @@
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Language, Theme, Typography } from "@components/ui";
-import { useTranslation } from "@hooks";
 import SimpleBar from "simplebar-react";
+import { useTranslation } from "@hooks";
 import "simplebar-react/dist/simplebar.min.css";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
 
 export const Panel = (props) => {
   //props
@@ -262,52 +267,229 @@ export const Panel = (props) => {
           </Typography>
         </div>
       </div>
+      <Swiper
+        className="swiper panel__slider"
+        modules={[Autoplay, Pagination]}
+        loop={true}
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        // autoplay={{
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // }}
+      >
+        <SwiperSlide>
+          <div className="panel__price stack column">
+            <div className="panel__price-image">
+              <img
+                src="/img/panel/price.svg"
+                width="48"
+                height="48"
+                alt="Decor"
+              />
+            </div>
 
-      <div className="panel__price stack column">
-        <div className="panel__price-image">
-          <img src="/img/panel/price.svg" width="48" height="48" alt="Decor" />
-        </div>
+            <div className="panel__price-info stack column">
+              <Typography
+                className="panel__price-title"
+                tag="h3"
+                weight="500"
+                upperCase
+              >
+                {t.title.professional}
+              </Typography>
+              <div className="panel__price-description stack column">
+                <Typography className="panel__price-subtitle" tag="h4">
+                  {t.subtitle.getLicense}
+                </Typography>
+                <Typography className="panel__price-text" tag="p">
+                  {t.subtitle.guidance}
+                </Typography>
+              </div>
+            </div>
 
-        <div className="panel__price-info stack column">
-          <Typography
-            className="panel__price-title"
-            tag="h3"
-            weight="500"
-            upperCase
-          >
-            {t.title.professional}
-          </Typography>
-          <div className="panel__price-description stack column">
-            <Typography className="panel__price-subtitle" tag="h4">
-              {t.subtitle.getLicense}
-            </Typography>
-            <Typography className="panel__price-text" tag="p">
-              {t.subtitle.guidance}
-            </Typography>
+            <div className="panel__price-bottom stack align-center justify-space-between">
+              <div className="panel__price-value stack align-center">
+                <Typography className="panel__price-value-currency" tag="span">
+                  $
+                </Typography>
+                <Typography className="panel__price-value-total" tag="span">
+                  249
+                </Typography>
+                <Typography className="panel__price-value-period" tag="span">
+                  / mo
+                </Typography>
+              </div>
+
+              <button
+                className="button-gradient"
+                onClick={() => setModalPriceActive(true)}
+              >
+                <span className="text stack">{t.actions.order}</span>
+              </button>
+            </div>
           </div>
-        </div>
+        </SwiperSlide>
+        {/* <SwiperSlide>
+          <div className="panel__price stack column">
+            <div className="panel__price-image">
+              <img
+                src="/img/panel/price.svg"
+                width="48"
+                height="48"
+                alt="Decor"
+              />
+            </div>
 
-        <div className="panel__price-bottom stack align-center justify-space-between">
-          <div className="panel__price-value stack align-center">
-            <Typography className="panel__price-value-currency" tag="span">
-              $
-            </Typography>
-            <Typography className="panel__price-value-total" tag="span">
-              249
-            </Typography>
-            <Typography className="panel__price-value-period" tag="span">
-              / mo
-            </Typography>
+            <div className="panel__price-info stack column">
+              <Typography
+                className="panel__price-title"
+                tag="h3"
+                weight="500"
+                upperCase
+              >
+                {t.title.professional}
+              </Typography>
+              <div className="panel__price-description stack column">
+                <Typography className="panel__price-subtitle" tag="h4">
+                  {t.subtitle.getLicense}
+                </Typography>
+                <Typography className="panel__price-text" tag="p">
+                  {t.subtitle.guidance}
+                </Typography>
+              </div>
+            </div>
+
+            <div className="panel__price-bottom stack align-center justify-space-between">
+              <div className="panel__price-value stack align-center">
+                <Typography className="panel__price-value-currency" tag="span">
+                  $
+                </Typography>
+                <Typography className="panel__price-value-total" tag="span">
+                  249
+                </Typography>
+                <Typography className="panel__price-value-period" tag="span">
+                  / mo
+                </Typography>
+              </div>
+
+              <button
+                className="button-gradient"
+                onClick={() => setModalPriceActive(true)}
+              >
+                <span className="text stack">{t.actions.order}</span>
+              </button>
+            </div>
           </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="panel__price stack column">
+            <div className="panel__price-image">
+              <img
+                src="/img/panel/price.svg"
+                width="48"
+                height="48"
+                alt="Decor"
+              />
+            </div>
 
-          <button
-            className="button-gradient"
-            onClick={() => setModalPriceActive(true)}
-          >
-            <span className="text stack">{t.actions.order}</span>
-          </button>
-        </div>
-      </div>
+            <div className="panel__price-info stack column">
+              <Typography
+                className="panel__price-title"
+                tag="h3"
+                weight="500"
+                upperCase
+              >
+                {t.title.professional}
+              </Typography>
+              <div className="panel__price-description stack column">
+                <Typography className="panel__price-subtitle" tag="h4">
+                  {t.subtitle.getLicense}
+                </Typography>
+                <Typography className="panel__price-text" tag="p">
+                  {t.subtitle.guidance}
+                </Typography>
+              </div>
+            </div>
+
+            <div className="panel__price-bottom stack align-center justify-space-between">
+              <div className="panel__price-value stack align-center">
+                <Typography className="panel__price-value-currency" tag="span">
+                  $
+                </Typography>
+                <Typography className="panel__price-value-total" tag="span">
+                  249
+                </Typography>
+                <Typography className="panel__price-value-period" tag="span">
+                  / mo
+                </Typography>
+              </div>
+
+              <button
+                className="button-gradient"
+                onClick={() => setModalPriceActive(true)}
+              >
+                <span className="text stack">{t.actions.order}</span>
+              </button>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="panel__price stack column">
+            <div className="panel__price-image">
+              <img
+                src="/img/panel/price.svg"
+                width="48"
+                height="48"
+                alt="Decor"
+              />
+            </div>
+
+            <div className="panel__price-info stack column">
+              <Typography
+                className="panel__price-title"
+                tag="h3"
+                weight="500"
+                upperCase
+              >
+                {t.title.professional}
+              </Typography>
+              <div className="panel__price-description stack column">
+                <Typography className="panel__price-subtitle" tag="h4">
+                  {t.subtitle.getLicense}
+                </Typography>
+                <Typography className="panel__price-text" tag="p">
+                  {t.subtitle.guidance}
+                </Typography>
+              </div>
+            </div>
+
+            <div className="panel__price-bottom stack align-center justify-space-between">
+              <div className="panel__price-value stack align-center">
+                <Typography className="panel__price-value-currency" tag="span">
+                  $
+                </Typography>
+                <Typography className="panel__price-value-total" tag="span">
+                  249
+                </Typography>
+                <Typography className="panel__price-value-period" tag="span">
+                  / mo
+                </Typography>
+              </div>
+
+              <button
+                className="button-gradient"
+                onClick={() => setModalPriceActive(true)}
+              >
+                <span className="text stack">{t.actions.order}</span>
+              </button>
+            </div>
+          </div>
+        </SwiperSlide> */}
+      </Swiper>
     </div>
   );
 };
