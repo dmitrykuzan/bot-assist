@@ -205,6 +205,8 @@
 
   //price
   &__slider {
+    // border: 0.1rem solid transparent;
+    // border-radius: 1.6rem;
     max-width: 30rem;
 
     .swiper-pagination {
@@ -222,11 +224,11 @@
     padding-right: 1.5rem;
     padding-bottom: 3.2rem;
     padding-left: 1.5rem;
-    background: linear-gradient(
-      133.04deg,
-      rgba(149, 102, 254, 0.7) -1.361%,
-      rgba(251, 199, 212, 0.7) 116.076%
-    );
+    // background: linear-gradient(
+    //   133.04deg,
+    //   rgba(149, 102, 254, 0.7) -1.361%,
+    //   rgba(251, 199, 212, 0.7) 116.076%
+    // );
     backdrop-filter: blur(2rem);
 
     &-title {

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export const ModalConsult = (props) => {
   //**props
-  const { active, setActive } = props;
+  const { active, setActive, setModalPolicyActive } = props;
 
   //** checkbox
   const [isChecked, setIsChecked] = useState(false);
@@ -28,6 +28,12 @@ export const ModalConsult = (props) => {
 
   //** translation
   const t = useTranslation();
+
+  //* click policy link
+  const handlePolicyLink = (event) => {
+    setActive(false);
+    setModalPolicyActive(true);
+  };
 
   return (
     <div
@@ -93,6 +99,7 @@ export const ModalConsult = (props) => {
               isChecked={isChecked}
               onChange={() => setIsChecked(!isChecked)}
               label={t.common.agreeProcessing}
+              onClick={handlePolicyLink}
               required
             />
 

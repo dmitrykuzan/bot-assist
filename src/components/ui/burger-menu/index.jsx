@@ -9,6 +9,7 @@ export const BurgerMenu = (props) => {
     setModalConsultActive,
     setModalPriceActive,
     setModalSendHistoryActive,
+    setIsMenuOpen,
   } = props;
 
   const t = useTranslation();
@@ -16,6 +17,22 @@ export const BurgerMenu = (props) => {
   const ref = useRef();
 
   useOnClickOutside(ref, onClose);
+
+  //* click policy link
+  const handlePriceModal = (event) => {
+    setIsMenuOpen(false);
+    setModalPriceActive(true);
+  };
+
+  const handleConsultModal = (event) => {
+    setIsMenuOpen(false);
+    setModalConsultActive(true);
+  };
+
+  const handleHistoryModal = (event) => {
+    setIsMenuOpen(false);
+    setModalSendHistoryActive(true);
+  };
 
   return (
     <div
@@ -34,7 +51,7 @@ export const BurgerMenu = (props) => {
               </button>
               <button
                 className="header__button button-purple header__button--plans stack align-center"
-                onClick={() => setModalPriceActive(true)}
+                onClick={handlePriceModal}
               >
                 <span className="icon stack center">
                   <img
@@ -49,14 +66,15 @@ export const BurgerMenu = (props) => {
                   {t.actions.plans}
                 </span>
               </button>
-              <button
-                className="button-purple"
-                onClick={() => setModalConsultActive(true)}
-              >
+              <button className="button-purple" onClick={handleConsultModal}>
                 {t.actions.consult}
               </button>
             </div>
-            <Panel setModalSendHistoryActive={setModalSendHistoryActive} />
+            <Panel
+              handlePriceModal={handlePriceModal}
+              handleHistoryModal={handleHistoryModal}
+              setModalPriceActive={setModalPriceActive}
+            />
           </div>
         </div>
       </div>

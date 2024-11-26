@@ -7,6 +7,7 @@ export const Header = (props) => {
     setModalConsultActive,
     setModalPriceActive,
     setModalSendHistoryActive,
+    setModalPolicyActive,
   } = props;
 
   const t = useTranslation();
@@ -24,7 +25,9 @@ export const Header = (props) => {
         setModalSendHistoryActive={setModalSendHistoryActive}
         setModalConsultActive={setModalConsultActive}
         setModalPriceActive={setModalPriceActive}
+        setModalPolicyActive={setModalPolicyActive}
         isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
         onClose={() => setIsMenuOpen(false)}
       />
       <header className="header">

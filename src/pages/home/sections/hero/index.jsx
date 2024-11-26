@@ -11,13 +11,15 @@ export const Hero = (props) => {
     setModalSendHistoryActive,
     setModalPriceActive,
     setModalConsultActive,
-    setModalSuccessActive,
-    setModalErrorActive,
     setModalLanguageActive,
   } = props;
 
   //translations
   const t = useTranslation();
+
+  const handleHistoryModal = (event) => {
+    setModalSendHistoryActive(true);
+  };
 
   return (
     <section className="hero">
@@ -118,10 +120,7 @@ export const Hero = (props) => {
                         </Typography>
 
                         <div className="hero__chat-bot-buttons stack">
-                          <button
-                            className="hero__chat-bot-button button-gradient"
-                            onClick={() => setModalSuccessActive(true)}
-                          >
+                          <button className="hero__chat-bot-button button-gradient">
                             <span className="text stack">
                               {t.actions.newChat}
                               <span className="icon stack center">
@@ -152,7 +151,7 @@ export const Hero = (props) => {
                           </button>
                           <button
                             className="hero__chat-bot-button button-gradient"
-                            onClick={() => setModalErrorActive(true)}
+                            // onClick={() => setModalErrorActive(true)}
                           >
                             <span className="text stack">
                               {t.actions.clean}
@@ -288,6 +287,7 @@ export const Hero = (props) => {
             setModalPriceActive={setModalPriceActive}
             setModalSendHistoryActive={setModalSendHistoryActive}
             setModalLanguageActive={setModalLanguageActive}
+            handleHistoryModal={handleHistoryModal}
           />
         </div>
       </Container>

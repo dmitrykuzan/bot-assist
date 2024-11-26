@@ -4,6 +4,7 @@ import {
   ModalConsult,
   ModalError,
   ModalLanguage,
+  ModalPolicy,
   ModalPrice,
   ModalSendHistory,
   ModalSuccess,
@@ -18,6 +19,7 @@ export const MainLayout = (props) => {
   const [modalSuccessActive, setModalSuccessActive] = useState(false);
   const [modalErrorActive, setModalErrorActive] = useState(false);
   const [modalSendHistoryActive, setModalSendHistoryActive] = useState(false);
+  const [modalPolicyActive, setModalPolicyActive] = useState(false);
 
   return (
     <div className={overflow ? "wrapper overflow" : "wrapper"}>
@@ -25,6 +27,7 @@ export const MainLayout = (props) => {
         setModalConsultActive={setModalConsultActive}
         setModalPriceActive={setModalPriceActive}
         setModalSendHistoryActive={setModalSendHistoryActive}
+        setModalPolicyActive={setModalPolicyActive}
       />
 
       <main>{children}</main>
@@ -32,8 +35,13 @@ export const MainLayout = (props) => {
       <ModalConsult
         active={modalConsultActive}
         setActive={setModalConsultActive}
+        setModalPolicyActive={setModalPolicyActive}
       />
-      <ModalPrice active={modalPriceActive} setActive={setModalPriceActive} />
+      <ModalPrice
+        active={modalPriceActive}
+        setActive={setModalPriceActive}
+        setModalPolicyActive={setModalPolicyActive}
+      />
       <ModalLanguage
         active={modalLanguageActive}
         setActive={setModalLanguageActive}
@@ -45,8 +53,13 @@ export const MainLayout = (props) => {
       <ModalSendHistory
         active={modalSendHistoryActive}
         setActive={setModalSendHistoryActive}
+        setModalPolicyActive={setModalPolicyActive}
       />
       <ModalError active={modalErrorActive} setActive={setModalErrorActive} />
+      <ModalPolicy
+        active={modalPolicyActive}
+        setActive={setModalPolicyActive}
+      />
     </div>
   );
 };

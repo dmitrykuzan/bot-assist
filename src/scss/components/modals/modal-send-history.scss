@@ -9,6 +9,10 @@
 
   &-form-fields {
     gap: 2.4rem;
+
+    @media (max-width: em(575)) {
+      gap: 1rem;
+    }
   }
 
   &-form-submit {

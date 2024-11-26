@@ -1,6 +1,7 @@
 export const title = {
   en: {
     hello: "Hello!",
+    termsConditions: "Terms & Conditions",
     paymentsAndSub: "Payments and Subscriptions",
     supportAndDocument: "Support and Documentation",
     sendHistory: "Send chat history to email",
@@ -29,6 +30,7 @@ export const title = {
 
   ru: {
     hello: "Привет!",
+    termsConditions: "Terms & Conditions",
     paymentsAndSub: "Платежи и подписки",
     supportAndDocument: "Поддержка и документация",
     sendHistory: "Отправить историю чата на email",

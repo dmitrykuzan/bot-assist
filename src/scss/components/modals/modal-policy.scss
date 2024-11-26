@@ -1,0 +1,68 @@
+.modal-policy {
+  .wrapper-scroll {
+    padding-right: 1.5rem;
+    max-height: 60rem;
+
+    .simplebar-scrollbar:before {
+      border-radius: 0.3rem;
+      width: 0.6rem;
+      background-color: rgb(227 227 227);
+      opacity: 1;
+    }
+
+    .simplebar-scrollbar.simplebar-visible:before {
+      opacity: 1;
+    }
+
+    .simplebar-track {
+      right: 0.1rem;
+    }
+  }
+
+  .modal__content-wrapper {
+    padding-right: 0;
+
+    .modal__close {
+      top: 1rem;
+    }
+  }
+
+  &__wrapper {
+    gap: 1.5rem;
+  }
+
+  &__content {
+    gap: 1rem;
+
+    p {
+      font-size: 1.4rem;
+      line-height: 133%;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      line-height: 133%;
+    }
+
+    ul,
+    ol {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-left: 2rem;
+
+      li {
+        font-size: 1.4rem;
+        line-height: 133%;
+      }
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+  }
+}

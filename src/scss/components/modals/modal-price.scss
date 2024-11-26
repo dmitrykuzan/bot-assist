@@ -1,14 +1,45 @@
 .modal-price {
   .modal__content-wrapper {
-    gap: 2.4rem;
+    padding-right: 0;
 
-    @media (max-width: em(1230)) {
-      overflow: auto;
-      max-height: 60rem;
+    .modal__close {
+      top: 1.2rem;
     }
 
+    .wrapper-scroll {
+      padding-right: 1.5rem;
+      max-height: 70rem;
+
+      .simplebar-scrollbar:before {
+        border-radius: 0.3rem;
+        width: 0.6rem;
+        background-color: rgb(227 227 227);
+        opacity: 1;
+      }
+
+      .simplebar-scrollbar.simplebar-visible:before {
+        opacity: 1;
+      }
+
+      .simplebar-track {
+        right: 0.1rem;
+      }
+
+      @media (max-width: em(1560)) {
+        max-height: 60rem;
+      }
+
+      @media (max-width: em(992)) {
+        max-height: 50rem;
+      }
+    }
+  }
+
+  &__body {
+    gap: 2.4rem;
+
     @media (max-width: em(992)) {
-      max-height: 50rem;
+      gap: 1.5rem;
     }
   }
 

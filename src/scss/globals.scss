@@ -50,6 +50,12 @@ $containerWidth: 131.5rem;
     rgb(251, 199, 212)
   );
 
+  --clr-gradient-200: linear-gradient(
+    133.04deg,
+    rgba(149, 102, 254, 0.7) -1.361%,
+    rgba(251, 199, 212, 0.7) 116.076%
+  );
+
   --clr-hover-200: #e8daff;
 }
 
@@ -165,8 +171,26 @@ main {
 @import "./components/modals/modal-language";
 @import "./components/modals/modal-success";
 @import "./components/modals/modal-error";
+@import "./components/modals/modal-policy";
 // Components - Modal
 
 // Components - Pages
 @import "./components/pages/home/hero";
 // Components - Pages
+
+// Custom Scrollbar Styles
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.3rem;
+  width: 0.6rem;
+  background-color: rgb(227 227 227);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}

@@ -1,1 +1,2 @@
-export * from "./menu";
+export * from "./slides";
+export * from "./slider-settings";
