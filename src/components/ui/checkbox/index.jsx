@@ -47,9 +47,11 @@ export const CheckBox = (props) => {
         {label && (
           <Typography className="checkbox-text" tag="span">
             {`${required && required ? "*" : ""} ${label}`}
-            <a href={srcLink} target="_blank" onClick={handleClick}>
-              {textLink && textLink}
-            </a>
+            {textLink && (
+              <a href={srcLink} target="_blank" onClick={handleClick}>
+                {textLink}
+              </a>
+            )}
           </Typography>
         )}
       </label>
