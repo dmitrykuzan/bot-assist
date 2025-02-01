@@ -4,7 +4,6 @@ export * from "./burger";
 export * from "./burger-menu";
 export * from "./show-image";
 export * from "./language";
-export * from "./theme";
 export * from "./input";
 export * from "./textarea";
 export * from "./dropdown";

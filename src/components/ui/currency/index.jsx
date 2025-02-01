@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import { useOnClickOutside } from "@hooks";
-import { Typography } from "@components/ui";
 
 export const Currency = (props) => {
   //Props

@@ -155,10 +155,7 @@ export const Hero = (props) => {
                               </span>
                             </span>
                           </button>
-                          <button
-                            className="hero__chat-bot-button button-gradient"
-                            // onClick={() => setModalErrorActive(true)}
-                          >
+                          <button className="hero__chat-bot-button button-gradient">
                             <span className="text stack">
                               {t.actions.clean}
                               <span className="icon stack center">

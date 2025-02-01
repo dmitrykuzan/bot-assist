@@ -563,7 +563,7 @@ export const Panel = (props) => {
                 <div key={id} className="panel__chat-message stack">
                   <CheckBox
                     className="dark"
-                    isChecked={!!checkedItemsSend[id]} // Если нет значения, считаем false
+                    isChecked={!!checkedItemsSend[id]}
                     onChange={() => handleCheckChangeSend(id)}
                   />
                   <div className="panel__chat-text">

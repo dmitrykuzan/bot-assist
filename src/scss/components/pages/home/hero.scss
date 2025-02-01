@@ -362,6 +362,7 @@
 
     &-bot-sublist {
       list-style: disc;
+      margin-top: 0.8rem;
       padding-left: 6rem;
 
       li {
@@ -376,6 +377,10 @@
         li {
           font-weight: 500;
         }
+      }
+
+      @media (max-width: em(575)) {
+        margin-top: 0.5rem;
       }
     }
 
@@ -521,7 +526,7 @@
       &-description {
         overflow: hidden;
         max-height: 0;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 132%;
         color: var(--clr-default-180);
         transition: max-height 1s cubic-bezier(0, 1, 0, 1);

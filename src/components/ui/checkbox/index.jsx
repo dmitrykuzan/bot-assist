@@ -38,10 +38,7 @@ export const CheckBox = (props) => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M4.5 9.4L0.5 5.4L1.9 4L4.5 6.6L11.1 0L12.5 1.4L4.5 9.4Z"
-              // fill="#2b2b2b"
-            />
+            <path d="M4.5 9.4L0.5 5.4L1.9 4L4.5 6.6L11.1 0L12.5 1.4L4.5 9.4Z" />
           </svg>
         </span>
         {label && (
