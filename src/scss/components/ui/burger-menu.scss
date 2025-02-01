@@ -16,14 +16,19 @@
   transition: transform var(--transition);
   backdrop-filter: blur(0.5rem);
 
-  &-top {
+  &-content {
     padding-top: 1.5rem;
   }
 
-  &-header {
+  &-body {
     gap: 2rem;
     margin-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  &-buttons {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &-logo {

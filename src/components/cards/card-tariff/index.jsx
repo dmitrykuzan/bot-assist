@@ -10,17 +10,24 @@ export const CardTariff = (props) => {
     price,
     currency,
     bgColor,
+    borderColor,
     setModalPriceActive,
     onClick,
+    enterprice,
   } = props;
 
   const t = useTranslation();
 
   return (
     <div
-      className="panel__price stack column"
+      className={`${
+        enterprice && enterprice ? "enterprice" : ""
+      } panel__price stack column`}
       style={{
         background: bgColor && bgColor ? bgColor : "var(--clr-gradient-200)",
+        border: `0.1rem solid ${
+          borderColor && borderColor ? borderColor : "var(--clr-default-200)"
+        }`,
       }}
     >
       <div className="panel__price-image">

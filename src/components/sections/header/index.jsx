@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Burger, BurgerMenu, Container, Logo } from "@components/ui";
+import {
+  Burger,
+  BurgerMenu,
+  Container,
+  Currency,
+  Language,
+  Logo,
+} from "@components/ui";
 import { useTranslation } from "@hooks";
 
 export const Header = (props) => {
@@ -7,6 +14,7 @@ export const Header = (props) => {
     setModalConsultActive,
     setModalPriceActive,
     setModalSendHistoryActive,
+    setModalDeleteChatActive,
     setModalPolicyActive,
   } = props;
 
@@ -23,6 +31,7 @@ export const Header = (props) => {
     <>
       <BurgerMenu
         setModalSendHistoryActive={setModalSendHistoryActive}
+        setModalDeleteChatActive={setModalDeleteChatActive}
         setModalConsultActive={setModalConsultActive}
         setModalPriceActive={setModalPriceActive}
         setModalPolicyActive={setModalPolicyActive}
@@ -37,7 +46,7 @@ export const Header = (props) => {
 
             <div className="header__navigation stack align-center">
               <button className="header__button-bitrix button-gradient">
-                <span className="text">{t.actions.bitrixHelp}</span>
+                <span className="text">{t.actions.loginBitrix}</span>
               </button>
               <button
                 className="header__button button-purple header__button--plans stack align-center"
@@ -63,7 +72,14 @@ export const Header = (props) => {
                 {t.actions.consult}
               </button>
             </div>
+
             <Burger openMenu={openMenu} isMenuOpen={isMenuOpen} />
+
+            <div className="header__buttons stack align-center">
+              <Language />
+              <span className="header__buttons-separator"></span>
+              <Currency options={["USD", "EUR"]} initialValue="USD" />
+            </div>
           </div>
         </Container>
       </header>

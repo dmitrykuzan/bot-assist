@@ -22,6 +22,13 @@
   //top
 
   //chat
+
+  &__chat-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 44rem;
+  }
+
   &__chat {
     border: 0.1rem solid var(--clr-default-100);
     border-radius: 1.6rem;
@@ -29,11 +36,33 @@
     padding-bottom: 1.5rem;
     padding-left: 1.5rem;
     background-color: var(--clr-default-250);
+    transition: transform var(--transition), opacity var(--transition),
+      visibility var(--transition);
 
     &-top {
-      gap: 1rem;
+      gap: 0.8rem;
       padding-right: 1.5rem;
       padding-bottom: 1.5rem;
+    }
+
+    &-back {
+      svg {
+        stroke: var(--clr-default-400);
+        transition: stroke var(--transition);
+      }
+
+      @media (hover) {
+        &:hover {
+          svg {
+            stroke: var(--clr-hover-400);
+          }
+        }
+      }
+    }
+
+    &-title {
+      gap: 0.8rem;
+      width: 100%;
     }
 
     &-buttons {
@@ -136,6 +165,7 @@
 
       .wrapper-scroll {
         padding-right: 1.5rem;
+        padding-bottom: 0.3rem;
         max-height: 27rem;
       }
 
@@ -155,29 +185,59 @@
       }
     }
 
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
     &-message {
+      z-index: 1;
       gap: 1rem;
+      border: 0.1rem solid transparent;
       border-radius: 1.6rem;
-      padding-top: 1.2rem;
-      padding-right: 1.5rem;
-      padding-bottom: 1.2rem;
-      padding-left: 1.5rem;
+      padding-top: 0.8rem;
+      padding-right: 1rem;
+      padding-bottom: 0.8rem;
+      padding-left: 1rem;
       background-color: var(--clr-default-120);
+      transition: border var(--transition), background-color var(--transition);
+      cursor: pointer;
 
       &:not(:last-child) {
         margin-bottom: 1rem;
       }
 
       &-text {
-        font-size: 1.4rem;
-        line-height: 132%;
+        font-size: 1.6rem;
+        line-height: 147%;
+        color: var(--clr-default-260);
       }
 
       &-date {
         margin-left: auto;
+        font-family: "Roboto", sans-serif;
         font-size: 1rem;
         line-height: 132%;
         color: var(--clr-default-180);
+      }
+
+      @media (hover) {
+        &:hover {
+          border: 0.1rem solid var(--clr-primary-400);
+        }
+      }
+
+      &:focus {
+        border: 0.1rem solid var(--clr-primary-400);
+      }
+
+      &:active {
+        border: 0.1rem solid var(--clr-primary-400);
+      }
+
+      &.active {
+        background-color: var(--clr-primary-200);
       }
     }
 
@@ -186,8 +246,13 @@
       padding-top: 2rem;
       padding-right: 1.5rem;
 
+      &-wrapper {
+        gap: 0.8rem;
+      }
+
       &-btn {
-        min-width: 100%;
+        width: 100%;
+        min-width: initial;
 
         .text {
           gap: 0.8rem;
@@ -200,13 +265,41 @@
         color: var(--clr-default-180);
       }
     }
+
+    &--delete,
+    &--send {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(100%);
+
+      .panel__chat-bottom-wrapper {
+        .panel__chat-bottom-btn {
+          max-width: 15rem;
+        }
+      }
+
+      &.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+    }
+
+    &.hide {
+      opacity: 1;
+      visibility: hidden;
+      transform: translateX(100%);
+    }
   }
   //chat
 
   //price
   &__slider {
-    // border: 0.1rem solid transparent;
-    // border-radius: 1.6rem;
     max-width: 30rem;
 
     .swiper-pagination {
@@ -224,11 +317,6 @@
     padding-right: 1.5rem;
     padding-bottom: 3.2rem;
     padding-left: 1.5rem;
-    // background: linear-gradient(
-    //   133.04deg,
-    //   rgba(149, 102, 254, 0.7) -1.361%,
-    //   rgba(251, 199, 212, 0.7) 116.076%
-    // );
     backdrop-filter: blur(2rem);
 
     &-title {
@@ -236,7 +324,6 @@
       font-size: fluid(2.4rem, 2rem);
       line-height: 130%;
       word-break: break-all;
-      color: var(--clr-default-100);
     }
 
     &-info {
@@ -244,45 +331,47 @@
     }
 
     &-subtitle {
+      font-family: "Roboto", sans-serif;
       font-weight: 500;
       font-size: 1.4rem;
       line-height: 132%;
-      color: var(--clr-default-100);
     }
 
     &-text {
-      font-size: 1.4rem;
-      line-height: 132%;
-      color: var(--clr-default-100);
+      font-size: 1.6rem;
+      line-height: 147%;
     }
 
     &-description {
       gap: 0.8rem;
     }
 
+    &.enterprice {
+      color: var(--clr-default-100);
+    }
+
     //bottom
 
     &-value {
       height: max-content;
+
       &-currency {
-        margin-top: 0.5rem;
+        margin-top: -0.5rem;
         margin-right: 0.2rem;
         font-weight: 700;
         font-size: fluid(2.4rem, 1.8rem);
-        color: var(--clr-default-100);
       }
 
       &-total {
+        font-family: "Roboto", sans-serif;
         font-weight: 600;
         font-size: fluid(4rem, 2.2rem);
-        color: var(--clr-default-100);
       }
 
       &-period {
         margin-top: auto;
         margin-bottom: 0.3rem;
         font-size: 1.4rem;
-        color: var(--clr-default-100);
 
         @media (max-width: em(575)) {
           margin-bottom: 0.1rem;

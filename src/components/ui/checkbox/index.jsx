@@ -10,6 +10,7 @@ export const CheckBox = (props) => {
     textLink,
     onClick,
     required,
+    className,
   } = props;
 
   const handleClick = (event) => {
@@ -20,7 +21,7 @@ export const CheckBox = (props) => {
   };
 
   return (
-    <div className="checkbox">
+    <div className={`${className ? className : ""} checkbox`}>
       <label className="checkbox-label stack align-center">
         <input
           className="checkbox-input"
@@ -39,16 +40,18 @@ export const CheckBox = (props) => {
           >
             <path
               d="M4.5 9.4L0.5 5.4L1.9 4L4.5 6.6L11.1 0L12.5 1.4L4.5 9.4Z"
-              fill="#2b2b2b"
+              // fill="#2b2b2b"
             />
           </svg>
         </span>
-        <Typography className="checkbox-text" tag="span">
-          {`${required && required ? "*" : ""} ${label}`}
-          <a href={srcLink} target="_blank" onClick={handleClick}>
-            {textLink}
-          </a>
-        </Typography>
+        {label && (
+          <Typography className="checkbox-text" tag="span">
+            {`${required && required ? "*" : ""} ${label}`}
+            <a href={srcLink} target="_blank" onClick={handleClick}>
+              {textLink && textLink}
+            </a>
+          </Typography>
+        )}
       </label>
     </div>
   );

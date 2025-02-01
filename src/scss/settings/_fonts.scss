@@ -12,9 +12,26 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  src: url("/fonts/GillSans-Medium.woff2") format("woff2");
+  font-family: "GillSans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   src: url("/fonts/Roboto-Regular.woff2") format("woff2");
   font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/GillSans-Regular.woff2") format("woff2");
+  font-family: "GillSans";
   font-weight: 400;
   font-style: normal;
   font-display: swap;

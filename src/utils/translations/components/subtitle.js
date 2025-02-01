@@ -2,6 +2,7 @@ export const subtitle = {
   en: {
     assist: "How can I assist you in making the most of your Bitrix24 CRM?",
     openMyPage: "Open “My Page.” ",
+    sureDelete: "Are you sure you want to delete 3 chats from the history?",
     extranet: "Extranet Users: External users from Extranet groups.",
     crmContact: 'CRM Contacts: Choose "Mine" or "All" and specify the number.',
     tickBoxes: "Tick the boxes next to the contacts you want.",
@@ -50,6 +51,7 @@ export const subtitle = {
     assist:
       "Как я могу помочь вам максимально эффективно использовать ваш Bitrix24 CRM?",
     openMyPage: "Открыть «Мою страницу».",
+    sureDelete: "Are you sure you want to delete 3 chats from the history?",
     extranet: "Пользователи Extranet: Внешние пользователи из Extranet-групп.",
     crmContact: "Контакты CRM: Выберите «Мои» или «Все» и укажите количество.",
     tickBoxes: "Отметьте галочками контакты, которые вы хотите выбрать.",

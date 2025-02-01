@@ -1,6 +1,9 @@
 export const common = {
   en: {
     queries: "You have 10 free queries remaining.",
+    bitrixUser: "Bitrix24 user? Login to get extra limits",
+    b24helper:
+      "B24Helper can make mistakes. In case of doubt book a human consultation",
     agreeProcessing:
       "I agree to the processing of my personal data for consultation purposes.",
     iagree:
@@ -11,6 +14,9 @@ export const common = {
 
   ru: {
     queries: "У вас осталось 10 бесплатных запросов.",
+    bitrixUser: "Bitrix24 user? Login to get extra limits",
+    b24helper:
+      "B24Helper can make mistakes. In case of doubt book a human consultation",
     agreeProcessing:
       "Я соглашаюсь на обработку моих персональных данных для целей консультации.",
     iagree:

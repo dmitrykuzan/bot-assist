@@ -53,7 +53,7 @@ export const Dropdown = (props) => {
           </span>
         </button>
         <ul className="dropdown__options stack column">
-          {options.map((option) => (
+          {options?.map((option) => (
             <li
               key={option}
               className="dropdown__option"

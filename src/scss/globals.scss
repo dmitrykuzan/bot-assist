@@ -18,7 +18,7 @@ $containerWidth: 131.5rem;
 
 :root {
   // Base
-  --font-family: "Roboto", sans-serif;
+  --font-family: "GillSans", sans-serif;
   --font-weight: 400;
   --content-width: 128.5rem;
   --container-offset: 1.5rem;
@@ -34,15 +34,27 @@ $containerWidth: 131.5rem;
   --clr-default-180: #888888;
   --clr-default-200: rgba(255, 255, 255, 0.6);
   --clr-default-250: rgba(255, 255, 255, 0.3);
+  --clr-default-260: #373737;
   --clr-default-400: #2b2b2b;
   --clr-default-450: #474747;
+  --clr-default-460: #717171;
   --clr-default-900: #000000;
   --clr-primary-200: #efe6fd;
   --clr-primary-300: #8fb7fe;
+  --clr-primary-400: #ceb0fa;
   --clr-bg-light: #f5f5f5;
 
   --clr-system-400: #2b9d1e;
   --clr-system-500: #fe6466;
+
+  --clr-color-basic: rgba(239, 230, 253, 0.6);
+  --clr-color-standart: rgba(226, 196, 255, 0.6);
+  --clr-color-professional: rgba(192, 133, 255, 0.6);
+  --clr-color-enterprice: linear-gradient(
+    127.24deg,
+    rgb(149, 102, 254) -2.716%,
+    rgb(251, 199, 212) 151.961%
+  );
 
   --clr-gradient-100: linear-gradient(
     125.39deg,
@@ -57,6 +69,7 @@ $containerWidth: 131.5rem;
   );
 
   --clr-hover-200: #e8daff;
+  --clr-hover-400: rgba(114, 58, 235, 0.8);
 }
 
 // </ПЕРЕМЕННЫЕ>==============================================================
@@ -146,11 +159,13 @@ main {
 @import "./components/ui/language";
 @import "./components/ui/burger";
 @import "./components/ui/burger-menu";
+@import "./components/ui/show-image";
 @import "./components/ui/theme";
 @import "./components/ui/input";
 @import "./components/ui/textarea";
 @import "./components/ui/checkbox";
 @import "./components/ui/dropdown";
+@import "./components/ui/currency";
 @import "./components/ui/typography";
 @import "./components/ui/logo";
 // Components - UI
@@ -161,11 +176,13 @@ main {
 // Components - Sections
 @import "./components/sections/header";
 @import "./components/sections/panel";
+@import "./components/sections/chat-options";
 // Components - Sections
 
 // Components - Modal
 @import "./components/modals/modal";
 @import "./components/modals/modal-send-history";
+@import "./components/modals/modal-delete-chat";
 @import "./components/modals/modal-consult";
 @import "./components/modals/modal-price";
 @import "./components/modals/modal-language";

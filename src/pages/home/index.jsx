@@ -5,6 +5,7 @@ import {
   ModalPolicy,
   ModalPrice,
   ModalSendHistory,
+  ModalDeleteChat,
   ModalError,
   ModalLanguage,
   ModalSuccess,
@@ -14,6 +15,7 @@ export const Home = () => {
   const [modalSendHistoryActive, setModalSendHistoryActive] = useState(false);
   const [modalPriceActive, setModalPriceActive] = useState(false);
   const [modalConsultActive, setModalConsultActive] = useState(false);
+  const [modalDeleteChatActive, setModalDeleteChatActive] = useState(false);
   const [modalPolicyActive, setModalPolicyActive] = useState(false);
   // const [modalLanguageActive, setModalLanguageActive] = useState(false);
   // const [modalSuccessActive, setModalSuccessActive] = useState(false);
@@ -25,6 +27,7 @@ export const Home = () => {
         setModalPriceActive={setModalPriceActive}
         setModalSendHistoryActive={setModalSendHistoryActive}
         setModalConsultActive={setModalConsultActive}
+        setModalDeleteChatActive={setModalDeleteChatActive}
         // setModalLanguageActive={setModalLanguageActive}
         // setModalSuccessActive={setModalSuccessActive}
         // setModalErrorActive={setModalErrorActive}
@@ -44,6 +47,10 @@ export const Home = () => {
         active={modalConsultActive}
         setActive={setModalConsultActive}
         setModalPolicyActive={setModalPolicyActive}
+      />
+      <ModalDeleteChat
+        active={modalDeleteChatActive}
+        setActive={setModalDeleteChatActive}
       />
       <ModalPolicy
         active={modalPolicyActive}

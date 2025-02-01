@@ -22,7 +22,23 @@ const Document = () => {
 
         <link
           rel="preload"
+          href="/fonts/GillSans-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+
+        <link
+          rel="preload"
           href="/fonts/Roboto-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+
+        <link
+          rel="preload"
+          href="/fonts/GillSans-Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin=""

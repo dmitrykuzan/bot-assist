@@ -1,6 +1,7 @@
 import { useOnClickOutside, useTranslation } from "@hooks";
 import { useRef } from "react";
 import { Panel } from "@components/sections";
+import { Currency, Language } from "@components/ui";
 
 export const BurgerMenu = (props) => {
   const {
@@ -9,6 +10,7 @@ export const BurgerMenu = (props) => {
     setModalConsultActive,
     setModalPriceActive,
     setModalSendHistoryActive,
+    setModalDeleteChatActive,
     setIsMenuOpen,
   } = props;
 
@@ -34,6 +36,11 @@ export const BurgerMenu = (props) => {
     setModalSendHistoryActive(true);
   };
 
+  const handleDeleteChatModal = (event) => {
+    setIsMenuOpen(false);
+    setModalDeleteChatActive(true);
+  };
+
   return (
     <div
       ref={ref}
@@ -42,12 +49,17 @@ export const BurgerMenu = (props) => {
       }
     >
       <div className="burger__menu-wrapper stack column justify-space-between ">
-        <div className="burger__menu-top stack column">
+        <div className="burger__menu-content stack column">
           <button className="burger__menu-close" onClick={onClose}></button>
-          <div className="burger__menu-header stack column">
+          <div className="burger__menu-body stack column">
+            <div className="burger__menu-buttons stack align-center">
+              <Language />
+              <span className="header__buttons-separator"></span>
+              <Currency options={["USD", "EUR"]} initialValue="USD" />
+            </div>
             <div className="burger__menu-navigation stack column">
               <button className="header__button-bitrix button-gradient">
-                <span className="text">{t.actions.bitrixHelp}</span>
+                <span className="text">{t.actions.loginBitrix}</span>
               </button>
               <button
                 className="header__button button-purple header__button--plans stack align-center"
@@ -73,7 +85,9 @@ export const BurgerMenu = (props) => {
             <Panel
               handlePriceModal={handlePriceModal}
               handleHistoryModal={handleHistoryModal}
+              handleDeleteChatModal={handleDeleteChatModal}
               setModalPriceActive={setModalPriceActive}
+              setModalDeleteChatActive={setModalDeleteChatActive}
             />
           </div>
         </div>

@@ -22,6 +22,7 @@
   }
 
   &__chat {
+    position: relative;
     display: flex;
     flex-direction: column;
     border: 0.1rem solid var(--clr-default-200);
@@ -29,7 +30,7 @@
     padding-bottom: 3rem;
     padding-left: 5rem;
     width: 100%;
-    min-height: 84rem;
+    min-height: 80rem;
     max-width: 96rem;
     background-color: var(--clr-default-250);
     backdrop-filter: blur(2rem);
@@ -41,7 +42,7 @@
       .wrapper-scroll {
         padding-right: 5rem;
         padding-bottom: 1rem;
-        max-height: 71rem;
+        max-height: 66rem;
 
         @media (max-width: em(767)) {
           padding-right: 2rem;
@@ -200,11 +201,64 @@
     }
 
     &-queries {
-      margin-top: 0.5rem;
+      position: relative;
+      margin-top: 1rem;
       margin-left: auto;
-      font-size: 1.2rem;
-      line-height: 132%;
-      color: var(--clr-default-120);
+
+      &-helper {
+        position: absolute;
+        left: 0;
+        bottom: 2.5rem;
+        z-index: -1;
+        gap: 1.5rem;
+        border-radius: 0.8rem;
+        padding: 0.8rem;
+        max-width: 22rem;
+        background-color: var(--clr-default-460);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity var(--transition), visibility var(--transition),
+          z-index var(--transition);
+
+        p {
+          font-size: 1.4rem;
+          line-height: 145%;
+          color: var(--clr-default-100);
+        }
+      }
+
+      &-btn {
+        width: 100%;
+
+        .text {
+          background-color: var(--clr-primary-200);
+        }
+      }
+
+      &-text {
+        font-size: 1.4rem;
+        line-height: 145%;
+        color: var(--clr-default-450);
+        cursor: pointer;
+      }
+
+      @media (hover) {
+        &:hover {
+          .hero__chat-queries-helper {
+            z-index: 1;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      &::focus {
+        .hero__chat-queries-helper {
+          z-index: 1;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
 
     //guide
@@ -231,8 +285,8 @@
       padding-bottom: 2rem;
       padding-left: 1.5rem;
       max-width: 40rem;
-      font-size: 1.4rem;
-      line-height: 132%;
+      font-size: 1.6rem;
+      line-height: 147%;
       background-color: var(--clr-default-120);
 
       &::before {
@@ -264,8 +318,8 @@
       gap: 2.5rem;
 
       p {
-        font-size: 1.4rem;
-        line-height: 132%;
+        font-size: 1.6rem;
+        line-height: 147%;
       }
     }
 
@@ -353,8 +407,8 @@
     }
 
     &-bot-help-description {
-      font-size: 1.4rem;
-      line-height: 132%;
+      font-size: 1.6rem;
+      line-height: 147%;
     }
 
     @media (max-width: em(1340)) {
@@ -457,8 +511,11 @@
       }
 
       &-title {
-        font-size: 1.2rem;
-        line-height: 132%;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 14rem;
+        font-size: 1.4rem;
+        line-height: 146%;
       }
 
       &-description {
@@ -543,6 +600,5 @@
 
   @media (max-width: em(1300)) {
     margin-top: 2rem;
-    padding-bottom: 3rem;
   }
 }

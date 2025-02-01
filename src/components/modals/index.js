@@ -1,4 +1,5 @@
 export * from "./modal-send-history";
+export * from "./modal-delete-chat";
 export * from "./modal-consult";
 export * from "./modal-price";
 export * from "./modal-language";

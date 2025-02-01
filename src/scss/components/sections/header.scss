@@ -15,6 +15,8 @@
 
   &__button-bitrix {
     .text {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
       background-color: var(--clr-primary-200);
     }
   }
@@ -29,6 +31,20 @@
       .icon {
         width: 2.4rem;
       }
+    }
+  }
+
+  &__buttons {
+    gap: 1rem;
+
+    &-separator {
+      width: 0.1rem;
+      height: 2rem;
+      background-color: var(--clr-primary-400);
+    }
+
+    @media (max-width: em(1024)) {
+      display: none;
     }
   }
 

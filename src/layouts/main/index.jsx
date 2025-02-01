@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "@components/sections";
 import {
   ModalConsult,
+  ModalDeleteChat,
   ModalError,
   ModalLanguage,
   ModalPolicy,
@@ -19,6 +20,7 @@ export const MainLayout = (props) => {
   const [modalSuccessActive, setModalSuccessActive] = useState(false);
   const [modalErrorActive, setModalErrorActive] = useState(false);
   const [modalSendHistoryActive, setModalSendHistoryActive] = useState(false);
+  const [modalDeleteChatActive, setModalDeleteChatActive] = useState(false);
   const [modalPolicyActive, setModalPolicyActive] = useState(false);
 
   return (
@@ -27,6 +29,7 @@ export const MainLayout = (props) => {
         setModalConsultActive={setModalConsultActive}
         setModalPriceActive={setModalPriceActive}
         setModalSendHistoryActive={setModalSendHistoryActive}
+        setModalDeleteChatActive={setModalDeleteChatActive}
         setModalPolicyActive={setModalPolicyActive}
       />
 
@@ -54,6 +57,10 @@ export const MainLayout = (props) => {
         active={modalSendHistoryActive}
         setActive={setModalSendHistoryActive}
         setModalPolicyActive={setModalPolicyActive}
+      />
+      <ModalDeleteChat
+        active={modalDeleteChatActive}
+        setActive={setModalDeleteChatActive}
       />
       <ModalError active={modalErrorActive} setActive={setModalErrorActive} />
       <ModalPolicy

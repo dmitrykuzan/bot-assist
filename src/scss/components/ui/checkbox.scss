@@ -22,6 +22,7 @@
     cursor: pointer;
 
     svg {
+      fill: #2b2b2b;
       opacity: 0;
     }
   }
@@ -40,6 +41,23 @@
     svg {
       opacity: 1;
       transition: opacity var(--transition);
+    }
+  }
+
+  &.dark {
+    .checkbox-fake {
+      border: 0.2rem solid var(--clr-default-460);
+      background-color: transparent;
+      transition: background-color var(--transition), border var(--transition);
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    .checkbox-input:checked + .checkbox-fake {
+      border: 0.2rem solid var(--clr-default-900);
+      background-color: var(--clr-default-900);
     }
   }
 }

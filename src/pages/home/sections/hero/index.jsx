@@ -1,7 +1,7 @@
-import { Container, Typography } from "@components/ui";
+import { Container, ShowImage, Typography } from "@components/ui";
 import { useTranslation } from "@hooks";
 import { Hello } from "..";
-import { Panel } from "@components/sections";
+import { ChatOption, Panel } from "@components/sections";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 
@@ -12,6 +12,7 @@ export const Hero = (props) => {
     setModalPriceActive,
     setModalConsultActive,
     setModalLanguageActive,
+    setModalDeleteChatActive,
   } = props;
 
   //translations
@@ -21,11 +22,16 @@ export const Hero = (props) => {
     setModalSendHistoryActive(true);
   };
 
+  const handleDeleteChatModal = (event) => {
+    setModalDeleteChatActive(true);
+  };
+
   return (
     <section className="hero">
       <Container>
         <div className="hero__wrapper stack justify-center">
           <div className="hero__chat">
+            <ShowImage />
             <div className="hero__chat-content">
               <SimpleBar
                 className="wrapper-scroll"
@@ -190,6 +196,8 @@ export const Hero = (props) => {
                           {t.subtitle.demonstration}
                         </Typography>
                       </div>
+
+                      <ChatOption />
                     </div>
                   </div>
 
@@ -242,6 +250,7 @@ export const Hero = (props) => {
                           </span>
                         </button>
                       </div>
+                      <ChatOption />
                     </div>
                   </div>
                 </div>
@@ -277,9 +286,18 @@ export const Hero = (props) => {
                   </button>
                 </div>
               </div>
-              <Typography className="hero__chat-queries" tag="span">
-                {t.common.queries}
-              </Typography>
+              <div className="hero__chat-queries">
+                <div className="hero__chat-queries-helper stack column">
+                  <Typography tag="p">{t.common.bitrixUser}</Typography>
+
+                  <button className="hero__chat-queries-btn button-gradient">
+                    <span className="text">{t.actions.loginBitrix}</span>
+                  </button>
+                </div>
+                <Typography className="hero__chat-queries-text" tag="p">
+                  {t.common.queries}
+                </Typography>
+              </div>
             </div>
           </div>
 
@@ -287,7 +305,9 @@ export const Hero = (props) => {
             setModalPriceActive={setModalPriceActive}
             setModalSendHistoryActive={setModalSendHistoryActive}
             setModalLanguageActive={setModalLanguageActive}
+            setModalDeleteChatActive={setModalDeleteChatActive}
             handleHistoryModal={handleHistoryModal}
+            handleDeleteChatModal={handleDeleteChatModal}
           />
         </div>
       </Container>

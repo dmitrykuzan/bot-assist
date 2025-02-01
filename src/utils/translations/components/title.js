@@ -2,6 +2,7 @@ export const title = {
   en: {
     hello: "Hello!",
     termsConditions: "Terms & Conditions",
+    deleteChats: "Delete 3 chats from the history",
     paymentsAndSub: "Payments and Subscriptions",
     supportAndDocument: "Support and Documentation",
     sendHistory: "Send chat history to email",
@@ -16,7 +17,12 @@ export const title = {
     fullguide:
       "A full guide on setting up synchronization is available in the following articles:",
     chatHistory: "Chat history",
-    professional: "Professional",
+    chatDelete: "Delete chats",
+    chatSend: "Send chat",
+    basic: "Basic",
+    standart: "standart",
+    professional: "professional",
+    enterprice: "Enterprice",
     cessing: "Ac cessing the Settings",
     selectContact: "Selecting Contacts for Synchronization:",
     default: "Default Settings:",
@@ -30,7 +36,8 @@ export const title = {
 
   ru: {
     hello: "Привет!",
-    termsConditions: "Terms & Conditions",
+    termsConditions: "Условия и положения",
+    deleteChats: "Удалить 3 чата из истории",
     paymentsAndSub: "Платежи и подписки",
     supportAndDocument: "Поддержка и документация",
     sendHistory: "Отправить историю чата на email",
@@ -45,7 +52,12 @@ export const title = {
     fullguide:
       "Полное руководство по настройке синхронизации доступно в следующих статьях:",
     chatHistory: "История чата",
-    professional: "Профессиональный",
+    chatDelete: "Удалить чаты",
+    chatSend: "Отправить чат",
+    basic: "Basic",
+    standart: "standart",
+    professional: "professional",
+    enterprice: "Enterprice",
     cessing: "Доступ к настройкам",
     selectContact: "Выбор контактов для синхронизации:",
     default: "Настройки по умолчанию:",
