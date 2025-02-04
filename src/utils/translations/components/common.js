@@ -12,7 +12,7 @@ export const common = {
     saving:
       "*Saving the chat history can be helpful for future CRM interactions",
     organized: "*Keep your chats organized—delete what you don’t need.",
-    hideShow: "Hide Images in Bot Answers / Show",
+    hideShow: "ON / OFF: Images in Bot Answers",
   },
 
   ru: {
@@ -28,6 +28,6 @@ export const common = {
     saving:
       "*Сохранение истории чата может быть полезно для будущих взаимодействий с CRM.",
     organized: "*Поддерживайте порядок в чатах — удаляйте ненужные сообщения.",
-    hideShow: "Скрыть изображения в ответах бота / Показать",
+    hideShow: "Вкл / Выкл: Изображения в ответах бота",
   },
 };
