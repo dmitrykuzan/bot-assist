@@ -19,6 +19,14 @@
       padding-left: 2.5rem;
       background-color: var(--clr-primary-200);
     }
+
+    @media (hover) {
+      &:hover {
+        .text {
+          background-color: var(--clr-hover-200);
+        }
+      }
+    }
   }
 
   &__button {

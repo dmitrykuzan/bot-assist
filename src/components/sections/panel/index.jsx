@@ -104,7 +104,7 @@ export const Panel = (props) => {
   const t = useTranslation();
 
   return (
-    <div className="panel stack column">
+    <div className="panel stack column justify-space-between">
       <button className="panel__top-button button-gradient">
         <span className="text stack">
           <span className="icon">
@@ -470,7 +470,7 @@ export const Panel = (props) => {
             </div>
 
             <Typography className="panel__chat-bottom-policy" tag="p">
-              {t.common.saving}
+              {t.common.organized}
             </Typography>
           </div>
         </div>

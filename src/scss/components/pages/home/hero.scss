@@ -91,56 +91,10 @@
       padding-right: 1.2rem;
       padding-left: 1.2rem;
       min-height: 4rem;
-      color: var(--clr-default-100);
-      background: linear-gradient(
-        125.39deg,
-        rgb(149, 102, 254) -14.17%,
-        rgb(251, 199, 212) 129.528%
-      );
+      color: var(--clr-default-400);
 
       span {
         z-index: 1;
-      }
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        border-radius: inherit;
-        width: 100%;
-        height: 100%;
-        transition: opacity var(--transition);
-      }
-
-      &::before {
-        background: linear-gradient(
-          125.39deg,
-          rgb(149, 102, 254) -14.17%,
-          rgb(251, 199, 212) 129.528%
-        );
-      }
-
-      &::after {
-        background: linear-gradient(
-          125.39deg,
-          rgb(149, 102, 254) 14.17%,
-          rgb(251, 199, 212) 129.528%
-        );
-        opacity: 0;
-      }
-
-      @media (hover) {
-        &:hover {
-          &::before {
-            opacity: 0;
-          }
-
-          &::after {
-            opacity: 1;
-          }
-        }
       }
     }
 
@@ -484,6 +438,23 @@
       color: var(--clr-default-450);
     }
 
+    &.before-first-message {
+      padding-top: 2rem;
+
+      .hero__list-item {
+        padding-bottom: 1rem;
+        height: initial;
+      }
+
+      .hero__list-item-description {
+        max-height: 20rem;
+      }
+
+      @media (max-width: em(767)) {
+        padding-top: 4rem;
+      }
+    }
+
     @media (max-width: em(1200)) {
       gap: 4rem;
       padding-top: 8rem;
@@ -506,6 +477,7 @@
       padding-bottom: 0;
       padding-left: 1rem;
       height: max-content;
+      min-height: 12rem;
       background-color: var(--clr-default-120);
       transition: padding-bottom 0.2s;
       cursor: pointer;

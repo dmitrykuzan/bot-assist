@@ -4,7 +4,7 @@ import { Typography } from "@components/ui";
 
 export const Dropdown = (props) => {
   //Props
-  const { label, options, initialValue } = props;
+  const { label, options, initialValue, placeholder } = props;
 
   // State Dropdown
   const [active, setActive] = useState(false);
@@ -31,10 +31,21 @@ export const Dropdown = (props) => {
       )}
       <div className={`dropdown__container ${active ? "active" : ""}`}>
         <button
+          type="button"
           className="dropdown__selected stack align-center justify-space-between"
           onClick={toggleDropdown}
         >
-          <span className="dropdown__value">{selectedOption}</span>
+          <div className="dropdown__value">
+            {selectedOption ? (
+              <Typography className="dropdown__value-text">
+                {selectedOption}
+              </Typography>
+            ) : (
+              <Typography className="dropdown__value-placeholder">
+                {placeholder}
+              </Typography>
+            )}
+          </div>
           <span className="dropdown__icon">
             <svg
               width="16"

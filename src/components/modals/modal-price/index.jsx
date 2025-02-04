@@ -57,7 +57,7 @@ export const ModalPrice = (props) => {
           <SimpleBar
             forceVisible="y"
             autoHide={false}
-            className="wrapper-scroll "
+            className="wrapper-scroll"
           >
             <div className="modal-price__body stack column">
               <div className="modal-price__text stack column">
@@ -85,12 +85,12 @@ export const ModalPrice = (props) => {
                 <Dropdown
                   label={t.actions.chooseTarif}
                   options={["Value", "Value1", "Value2"]}
-                  initialValue="Value"
+                  placeholder="Value"
                 />
                 <Dropdown
                   label={t.actions.periodLicence}
                   options={["Value", "Value1", "Value2"]}
-                  initialValue="Value"
+                  placeholder="Value"
                 />
               </div>
               <form className="modal-price__form stack column">
@@ -131,7 +131,7 @@ export const ModalPrice = (props) => {
                     required
                     placeholder={t.actions.value}
                     label={t.actions.emailInvoice}
-                    type="text"
+                    type="email"
                   />
                 </div>
                 <CheckBox

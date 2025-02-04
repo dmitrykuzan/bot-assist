@@ -4,7 +4,7 @@
   &__wrapper {
     border: 0.1rem solid var(--clr-default-160);
     border-radius: 0.8rem;
-    height: 8rem;
+    height: 10rem;
     background-color: var(--clr-default-100);
     transition: border var(--transition);
 
@@ -28,5 +28,10 @@
     &:focus-within {
       border: 0.1rem solid var(--clr-default-180);
     }
+  }
+
+  &__maxlength {
+    margin-left: auto;
+    color: var(--clr-default-460);
   }
 }

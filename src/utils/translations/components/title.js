@@ -13,6 +13,7 @@ export const title = {
     reached: "You’ve reached your limit of free queries.",
     stayTuned: "Stay tuned!",
     pricingPlans: "Pricing plans are coming soon!",
+    feedback: "Help Us Improve – Submit Your Feedback",
     subError: "Submission {{Error}}",
     fullguide:
       "A full guide on setting up synchronization is available in the following articles:",
@@ -48,6 +49,7 @@ export const title = {
     reached: "Вы достигли лимита бесплатных запросов.",
     stayTuned: "Оставайтесь с нами!",
     pricingPlans: "Тарифные планы скоро появятся!",
+    feedback: "Помогите нам стать лучше — оставьте свой отзыв",
     subError: "Ошибка отправки {{Error}}",
     fullguide:
       "Полное руководство по настройке синхронизации доступно в следующих статьях:",

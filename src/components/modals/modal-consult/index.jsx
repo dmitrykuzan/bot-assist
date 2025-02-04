@@ -88,9 +88,10 @@ export const ModalConsult = (props) => {
                 required
               />
               <TextArea
-                label={t.actions.message}
+                label={t.actions.messageType}
                 name="message"
                 placeholder={t.actions.value}
+                maxlength={t.actions.maxLength1000}
               />
             </div>
             <CheckBox

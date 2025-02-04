@@ -10,6 +10,7 @@ export const Hero = (props) => {
   const {
     setModalSendHistoryActive,
     setModalPriceActive,
+    setModalFeedbackActive,
     setModalConsultActive,
     setModalLanguageActive,
     setModalDeleteChatActive,
@@ -29,7 +30,7 @@ export const Hero = (props) => {
   return (
     <section className="hero">
       <Container>
-        <div className="hero__wrapper stack justify-center">
+        <div className="hero__wrapper stack">
           <div className="hero__chat">
             <ShowImage />
             <div className="hero__chat-content">
@@ -194,7 +195,9 @@ export const Hero = (props) => {
                         </Typography>
                       </div>
 
-                      <ChatOption />
+                      <ChatOption
+                        setModalFeedbackActive={setModalFeedbackActive}
+                      />
                     </div>
                   </div>
 
@@ -247,7 +250,9 @@ export const Hero = (props) => {
                           </span>
                         </button>
                       </div>
-                      <ChatOption />
+                      <ChatOption
+                        setModalFeedbackActive={setModalFeedbackActive}
+                      />
                     </div>
                   </div>
                 </div>
@@ -256,10 +261,10 @@ export const Hero = (props) => {
             <div className="hero__chat-navigation stack column">
               <div className="hero__chat-navigation-wrapper stack align-center">
                 <button
-                  className="hero__chat-button stack align-center"
+                  className="hero__chat-button button button-purple"
                   onClick={() => setModalConsultActive(true)}
                 >
-                  <span className="stack center">
+                  <span className="icon stack center">
                     <img
                       src="/img/hero/call.svg"
                       width="18"
@@ -267,7 +272,7 @@ export const Hero = (props) => {
                       alt="Call icon"
                     />
                   </span>
-                  <span>{t.actions.book}</span>
+                  <span className="text">{t.actions.book}</span>
                 </button>
                 <div className="hero__chat-input">
                   <input type="text" placeholder={t.actions.ask} />

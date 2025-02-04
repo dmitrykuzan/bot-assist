@@ -1,7 +1,10 @@
 import { Typography } from "@components/ui";
 import { useTranslation } from "@hooks";
 
-export const ChatOption = () => {
+export const ChatOption = (props) => {
+  //** props
+  const { setModalFeedbackActive } = props;
+
   const t = useTranslation();
 
   return (
@@ -37,7 +40,10 @@ export const ChatOption = () => {
             </Typography>
           </button>
           <span className="chat-options__separator"></span>
-          <button className="chat-options__button stack center">
+          <button
+            onClick={() => setModalFeedbackActive(true)}
+            className="chat-options__button stack center"
+          >
             <span className="icon stack center">
               <svg
                 width="18"

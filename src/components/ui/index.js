@@ -6,6 +6,7 @@ export * from "./show-image";
 export * from "./language";
 export * from "./input";
 export * from "./textarea";
+export * from "./upload";
 export * from "./dropdown";
 export * from "./currency";
 export * from "./checkbox";

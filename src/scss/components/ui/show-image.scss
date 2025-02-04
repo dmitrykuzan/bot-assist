@@ -59,6 +59,27 @@
     }
   }
 
+  &__helper {
+    position: absolute;
+    left: 0;
+    top: 4.5rem;
+    z-index: -1;
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    min-width: 22rem;
+    background-color: var(--clr-default-460);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility var(--transition), opacity var(--transition),
+      z-index var(--transition);
+
+    p {
+      font-size: 1.4rem;
+      line-height: 146%;
+      color: var(--clr-default-120);
+    }
+  }
+
   &.active {
     .show-image__toggle {
       background-color: var(--clr-primary-400);
@@ -85,6 +106,16 @@
             stroke: var(--clr-default-400);
           }
         }
+      }
+    }
+  }
+
+  @media (hover) {
+    &:hover {
+      .show-image__helper {
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
       }
     }
   }

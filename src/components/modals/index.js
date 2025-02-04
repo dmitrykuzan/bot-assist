@@ -1,6 +1,7 @@
 export * from "./modal-send-history";
 export * from "./modal-delete-chat";
 export * from "./modal-consult";
+export * from "./modal-feedback";
 export * from "./modal-price";
 export * from "./modal-language";
 export * from "./modal-policy";

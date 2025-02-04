@@ -2,6 +2,7 @@ export const common = {
   en: {
     queries: "You have 10 free queries remaining.",
     bitrixUser: "Bitrix24 user? Login to get extra limits",
+    formats: "Formats: dwg, edr, pdf, ai. Up to 15 MB",
     b24helper:
       "B24Helper can make mistakes. In case of doubt book a human consultation",
     agreeProcessing:
@@ -10,11 +11,14 @@ export const common = {
       "I agree to receive my chat history by email and consent to the processing of my data for this purpose.",
     saving:
       "*Saving the chat history can be helpful for future CRM interactions",
+    organized: "*Keep your chats organized—delete what you don’t need.",
+    hideShow: "Hide Images in Bot Answers / Show",
   },
 
   ru: {
     queries: "У вас осталось 10 бесплатных запросов.",
     bitrixUser: "Bitrix24 user? Login to get extra limits",
+    formats: "Форматы: dwg, edr, pdf, ai. До 15 MB",
     b24helper:
       "B24Helper can make mistakes. In case of doubt book a human consultation",
     agreeProcessing:
@@ -23,5 +27,7 @@ export const common = {
       "Я соглашаюсь получить историю моего чата на email и даю согласие на обработку моих данных для этой цели.",
     saving:
       "*Сохранение истории чата может быть полезно для будущих взаимодействий с CRM.",
+    organized: "*Поддерживайте порядок в чатах — удаляйте ненужные сообщения.",
+    hideShow: "Скрыть изображения в ответах бота / Показать",
   },
 };

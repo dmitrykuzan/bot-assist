@@ -5,7 +5,7 @@ export const Hello = () => {
   const t = useTranslation();
 
   return (
-    <div className="hero__hello stack column">
+    <div className="hero__hello before-first-message stack column">
       <div className="hero__hello-info stack column">
         <Typography
           className="hero__hello-title"
@@ -33,7 +33,7 @@ export const Hello = () => {
       </div>
 
       <ul className="hero__list stack justify-center">
-        <li className="hero__list-item stack align-center column">
+        <li className="hero__list-item stack align-center  column">
           <div className="hero__list-item-image">
             <img
               src="/img/hero/cash.svg"
@@ -56,7 +56,7 @@ export const Hello = () => {
             </Typography>
           </div>
         </li>
-        <li className="hero__list-item  stack align-center column">
+        <li className="hero__list-item  stack align-center  column">
           <div className="hero__list-item-image">
             <img
               src="/img/hero/document.svg"
@@ -79,7 +79,7 @@ export const Hello = () => {
             </Typography>
           </div>
         </li>
-        <li className="hero__list-item stack align-center column">
+        <li className="hero__list-item stack align-center  column">
           <div className="hero__list-item-image">
             <img
               src="/img/hero/up.svg"

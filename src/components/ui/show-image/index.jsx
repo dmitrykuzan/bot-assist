@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { Typography } from "@components/ui";
+import { useTranslation } from "@hooks";
 
 export const ShowImage = () => {
   // State Dropdown
   const [active, setActive] = useState(false);
 
   const toggleDropdown = () => setActive(!active);
+
+  const t = useTranslation();
 
   return (
     <div className={`${active ? "active" : ""} show-image stack align-center`}>
@@ -72,6 +76,10 @@ export const ShowImage = () => {
           />
         </svg>
       </button>
+
+      <div className="show-image__helper">
+        <Typography tag="p">{t.common.hideShow}</Typography>
+      </div>
     </div>
   );
 };

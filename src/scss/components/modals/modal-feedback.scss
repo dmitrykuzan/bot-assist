@@ -1,0 +1,24 @@
+.modal-feedback {
+  &__title {
+    max-width: 52rem;
+
+    @media (max-width: em(1024)) {
+      max-width: initial;
+    }
+  }
+  &__body {
+    gap: 2.5rem;
+
+    @media (max-width: em(1024)) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__form {
+    gap: 1.5rem;
+
+    @media (max-width: em(1024)) {
+      gap: 1rem;
+    }
+  }
+}

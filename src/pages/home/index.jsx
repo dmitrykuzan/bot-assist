@@ -9,11 +9,13 @@ import {
   ModalError,
   ModalLanguage,
   ModalSuccess,
+  ModalFeedback,
 } from "@components/modals";
 
 export const Home = () => {
   const [modalSendHistoryActive, setModalSendHistoryActive] = useState(false);
   const [modalPriceActive, setModalPriceActive] = useState(false);
+  const [modalFeedbackActive, setModalFeedbackActive] = useState(false);
   const [modalConsultActive, setModalConsultActive] = useState(false);
   const [modalDeleteChatActive, setModalDeleteChatActive] = useState(false);
   const [modalPolicyActive, setModalPolicyActive] = useState(false);
@@ -25,6 +27,7 @@ export const Home = () => {
     <>
       <Hero
         setModalPriceActive={setModalPriceActive}
+        setModalFeedbackActive={setModalFeedbackActive}
         setModalSendHistoryActive={setModalSendHistoryActive}
         setModalConsultActive={setModalConsultActive}
         setModalDeleteChatActive={setModalDeleteChatActive}
@@ -41,6 +44,11 @@ export const Home = () => {
       <ModalPrice
         active={modalPriceActive}
         setActive={setModalPriceActive}
+        setModalPolicyActive={setModalPolicyActive}
+      />
+      <ModalFeedback
+        active={modalFeedbackActive}
+        setActive={setModalFeedbackActive}
         setModalPolicyActive={setModalPolicyActive}
       />
       <ModalConsult
